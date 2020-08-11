@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MPOP</title>
+
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+     <!-- NAVIGATION BAR -->
+    <header>
+        <nav>
+            <ul class="list">
+                <li class="item logo">
+                    <a href=""><img id="mars" src="img/mars.png" alt="Nasa"></a>
+                    <img id="rocket" src="img/rocket.png" alt="Nasa">
+                </li>
+                <li class="item">
+                    <a href="">Missions</a>
+                </li>
+                <li class="item">
+                    <a href="">Facts</a>
+                </li>
+                <li class="item">
+                    <a href="">Reasons</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="title">Seeking Beyond Earth</div>
+
+     <!-- CAROUSEL IMAGES -->
+    <div class="carousel">
+         <!-- left button -->
+        <button class="carousel_button left is-hidden">
+            <img src="img/left-arrow.svg" alt="">
+        </button>
+         <!-- right button -->
+        <button class="carousel_button right">
+            <img src="img/right-arrow.svg" alt="">
+        </button>       
+         <!-- images -->
+        <div class="carousel_track-container">
+            <ul class="carousel_track">
+                <li class="carousel_slide current-slide">
+                    <img class="carousel_image" src="img/slide-1.jpg" alt="">        
+                </li>
+                <li class="carousel_slide">
+                    <img class="carousel_image" src="img/slide-2.jpg" alt="">            
+                </li>
+                <li class="carousel_slide">
+                    <img class="carousel_image" src="img/slide-3.png" alt="">    
+                </li>
+                <li class="carousel_slide">
+                    <img class="carousel_image" src="img/slide-4.jpg" alt="">    
+                </li>
+            </ul>
+        </div>
+        <!-- dot buttons -->
+        <div class="carousel_nav">
+            <button class="carousel_indicator current-slide"></button>
+            <button class="carousel_indicator"></button>
+            <button class="carousel_indicator"></button>
+            <button class="carousel_indicator"></button>
+        </div>   
+    </div>
+    <footer >
+
+     <!-- FOOTER -->
+    </footer>
+    <script src="js/carousel.js"></script>
+</body>
+</html>

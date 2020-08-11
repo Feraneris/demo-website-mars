@@ -1,0 +1,198 @@
+
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font: normal 400 17px "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    background-color: #fff;
+    color: #1d1d1f;
+    background: #f1f1f1;
+    header{
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 99;
+        display: block;
+        margin: 0;
+        width: 100%;
+        min-width: 1024px;
+        height: 40px;
+        background: rgba($color: #000, $alpha: 0.9);
+        //background: linear-gradient(rgba(34,34,34,1) 0%, rgba(0,0,0,1) 50%, rgba(34,34,34,1) 100%);
+        font-size: 17px;
+        user-select: none;
+        nav{
+            position: relative;
+            margin: 0 auto;
+            max-width: 980px;
+            padding: 0 22px;
+            .list{
+                display: flex;
+                justify-content: space-between;
+                height: 40px;
+                align-items: center;
+                list-style: none;
+                .item{
+                    a{
+                        display: flex;
+                        align-items: center;
+                        text-decoration:none;
+                        color: #dbdbdb;
+                        height: 40px;
+                        &:hover{color: #f1f1f1;}
+                    }
+                }
+                .logo{
+                    width: 300px;
+                    height: 300px;
+                    position: relative;
+                    //left:-0px;
+                    background-color: transparent;
+                    #mars{
+                        position: absolute;
+                        height: 32px;
+                        top: 134px;
+                        left: 134px;
+                    }
+                    #rocket{
+                        position: absolute;
+                        height: 16px;
+                        animation: fly 8s linear infinite;  
+                    }
+                    @keyframes fly {
+                        0%   {left:0px; top:115px; transform: rotate(60deg);}
+                        25%  {left:124px; top:134px; transform: rotate(-115deg);}
+                        50%  {left:124px; top:134px; transform: rotate(-115deg);}
+                        75%  {left:124px; top:134px; transform: rotate(-115deg);}
+                        100% {left:0px; top:100px; transform: rotate(-100deg);}
+                    }  
+                } 
+                // .logo{
+                //     width: 100px;
+                //     height: 100px;
+                //     position: relative;
+                //     #mars{
+                //         position: absolute;
+                //         height: 32px;
+                //         top: 34px;
+                //         left: 34px;
+                //     }
+                //     #rocket{
+                //         position: absolute;
+                //         height: 16px;
+                //         animation: fly 6s linear infinite;  
+                //     }
+                //     @keyframes fly {
+                //         0%   {left:0px; top:0px; transform: rotate(-225deg);}
+                //         25%  {left:0px; top:84px; transform: rotate(-225deg);}
+                //         50%  {left:84px; top:84px; transform: rotate(-45deg);}
+                //         75%  {left:84px; top:0px; transform: rotate(-45deg);}
+                //         100% {left:0px; top:0px; transform: rotate(-225deg);}
+                //     }  
+                // } 
+            }
+        }
+    }
+    .title{
+        position: relative;
+        margin-top: 40px;
+        height: fit-content;
+        width: 100%;
+        padding: 50px 0;
+        text-align: center;
+        font-size: 40px;
+        //background: linear-gradient(#e0e0e0 0%, #fff 100%);
+    }
+    .carousel{
+        position: relative;
+        margin: 0 auto;
+        height: 550px;
+        width: 100%;
+        //background-color: #f1f1f1;
+        z-index: 1;
+        .carousel_button{
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            top: 50%;
+            transform: translateY(-50%);           
+            background:rgba($color: #fff, $alpha: 0.2);
+            border: 0;
+            border-radius:50%;
+            
+            width: 40px;
+            height: 40px;              
+        }
+        .left{
+            left:10px;
+            z-index: 1;  
+            img{
+                transform: translateX(-10%);
+                width: 24px;                            
+            } 
+        }
+        .right{
+            right:10px;
+            z-index: 1;  
+            img{
+                transform: translateX(10%);
+                width: 24px;                            
+            }          
+        }
+        .is-hidden{
+            display: none;
+        }
+        .carousel_track-container{
+            background-color: #fff;
+            position:relative;
+            height: 100%;
+            overflow: hidden;
+            .carousel_track{
+                padding: 0;
+                margin: 0;
+                list-style:none;
+                position: relative;
+                height: 100%;
+                transition:transform 250ms ease-in-out;
+                .carousel_slide{
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    width:100%;
+                    .carousel_image{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }  
+                } 
+            }
+        }
+        .carousel_nav{   
+            position: absolute;
+            width: 100%;  
+            display:flex;
+            justify-content: center;
+            top: 95%;                    
+            .carousel_indicator{
+                position: relative;
+                border: 0;
+                border-radius: 50%;
+                width: 15px;
+                height: 15px;
+                background: rgba($color: #fff, $alpha: 0.3);
+                margin: 0 12px;
+                cursor: pointer;
+                transition: 0.2s;
+            }
+            .current-slide{
+                background: rgba($color: #fff, $alpha: 0.4);
+                scale: 1.2;
+                transition: 0.2s;
+            }       
+        }
+    }
+}
