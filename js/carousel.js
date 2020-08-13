@@ -65,7 +65,7 @@ setInterval(()=>{
    moveToSlide(track, currentSlide, nextSlide);
    updateDots(currentDot, nextDot);
    hideShowArrows(slides, previousButton, nextButton, nextIndex);
-},3000);
+},5000);
 
 // when I click left, move slides to the left
 previousButton.addEventListener('click', e => {

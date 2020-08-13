@@ -153,23 +153,23 @@ body header nav .list .logo #rocket {
   }
 }
 
-body .title {
+body .carousel {
   position: relative;
   margin-top: 40px;
+  height: 800px;
+  width: 100%;
+}
+
+body .carousel .title {
+  position: absolute;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   width: 100%;
-  padding: 50px 0;
+  top: 43%;
   text-align: center;
-  font-size: 40px;
-}
-
-body .carousel {
-  position: relative;
-  margin: 0 auto;
-  height: 550px;
-  width: 100%;
+  font-size: 80px;
+  color: #fff;
   z-index: 1;
 }
 
@@ -284,5 +284,113 @@ body .carousel .carousel_nav .current-slide {
   scale: 1.2;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+
+body .companies {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .companies .company {
+  height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+body .companies .company .name-logo {
+  background-color: #000;
+  height: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .companies .company .name-logo img {
+  height: 130px;
+}
+
+body .companies .company .content {
+  height: 450px;
+  position: relative;
+  overflow: hidden;
+}
+
+body .companies .company .content .image {
+  position: absolute;
+  height: 650px;
+  width: 690px;
+  -webkit-transform: rotate(15deg);
+          transform: rotate(15deg);
+  overflow: hidden;
+  background: red;
+  z-index: 1;
+}
+
+body .companies .company .content .image img {
+  position: absolute;
+  top: 70px;
+  width: 120%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+}
+
+body .companies .company .content .text {
+  position: absolute;
+  height: 450px;
+  width: 490px;
+}
+
+body .companies .company .set1 .image {
+  left: -75px;
+  top: -100px;
+}
+
+body .companies .company .set1 .text {
+  right: 0;
+}
+
+body .companies .company .set2 .image {
+  right: -75px;
+  top: -75px;
+}
+
+body .companies .company .set2 .text {
+  left: 0;
+}
+
+body .companies .spacex :first-child img {
+  height: 150px;
+}
+
+body .companies .spacex :last-child :last-child img {
+  top: unset;
+  left: -70px;
+}
+
+body .companies .borigin :first-child img {
+  height: 100px;
 }
 /*# sourceMappingURL=index.css.map */

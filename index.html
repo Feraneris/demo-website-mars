@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>MPOP</title>
+    <title>Mars</title>
 
     <link rel="stylesheet" href="css/index.css">
     <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap" rel="stylesheet">
@@ -16,8 +16,8 @@
         <nav>
             <ul class="list">
                 <li class="item logo">
-                    <a href=""><img id="mars" src="img/mars.png" alt="Nasa"></a>
-                    <img id="rocket" src="img/rocket.png" alt="Nasa">
+                    <a href=""><img id="mars" src="img/logo/mars.png" alt="Nasa"></a>
+                    <img id="rocket" src="img/logo/rocket.png" alt="Nasa">
                 </li>
                 <li class="item">
                     <a href="">Missions</a>
@@ -32,32 +32,36 @@
         </nav>
     </header>
 
-    <div class="title">Seeking Beyond Earth</div>
+    
 
      <!-- CAROUSEL IMAGES -->
     <div class="carousel">
+        <div class="title">Living Beyond Earth</div>
          <!-- left button -->
         <button class="carousel_button left is-hidden">
-            <img src="img/left-arrow.svg" alt="">
+            <img src="img/carousel-arrows/left-arrow.svg" alt="">
         </button>
          <!-- right button -->
         <button class="carousel_button right">
-            <img src="img/right-arrow.svg" alt="">
+            <img src="img/carousel-arrows/right-arrow.svg" alt="">
         </button>       
          <!-- images -->
         <div class="carousel_track-container">
             <ul class="carousel_track">
                 <li class="carousel_slide current-slide">
-                    <img class="carousel_image" src="img/slide-1.jpg" alt="">        
+                    <img class="carousel_image" src="img/carousel-slides/538180.jpg" alt="">        
                 </li>
                 <li class="carousel_slide">
-                    <img class="carousel_image" src="img/slide-2.jpg" alt="">            
+                    <img class="carousel_image" src="img/carousel-slides/538148.jpg" alt="">            
                 </li>
                 <li class="carousel_slide">
-                    <img class="carousel_image" src="img/slide-3.png" alt="">    
+                    <img class="carousel_image" src="img/carousel-slides/532768.jpg" alt="">    
                 </li>
                 <li class="carousel_slide">
-                    <img class="carousel_image" src="img/slide-4.jpg" alt="">    
+                    <img class="carousel_image" src="img/carousel-slides/slide-3.png" alt="">    
+                </li>
+                <li class="carousel_slide">
+                    <img class="carousel_image" src="img/carousel-slides/538145.jpg" alt="">    
                 </li>
             </ul>
         </div>
@@ -67,11 +71,73 @@
             <button class="carousel_indicator"></button>
             <button class="carousel_indicator"></button>
             <button class="carousel_indicator"></button>
+            <button class="carousel_indicator"></button>
         </div>   
     </div>
+
+    <!--companies-->
+    <div class="companies">
+        <!--NASA-->
+        <div class="company nasa">
+            <div class="name-logo">
+                <img src="img/companies/logos/nasa-logo.png" alt="">
+            </div>
+            <div class="content set1">
+                <div class="image">
+                    <img src="img/companies/pictures/nasa-image.jpg" alt="">
+                </div>
+                <div class="text">
+
+                </div>
+            </div>
+        </div>
+        <!--SpaceX-->
+        <div class="company spacex">
+            <div class="name-logo">
+                <img src="img/companies/logos/spacex-logo.jpg" alt="">
+            </div>
+            <div class="content set2">
+                <div class="text">
+                    
+                </div>
+                <div class="image">
+                    <img src="img/companies/pictures/spacex-image.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <!--Blue Origin-->
+        <div class="company borigin">
+            <div class="name-logo ">
+                <img src="img/companies/logos/borigin-logo.png" alt="">
+            </div>
+            <div class="content set1">
+                <div class="image">
+                    <img src="img/companies/pictures/blue-origin-image.jpg" alt="">
+                </div>
+                <div class="text">
+                    
+                </div>
+            </div>
+        </div>
+        <!--TBA-->
+        <div class="company tba">
+            <div class="name-logo">
+                <img src="" alt="">
+            </div>
+            <div class="content set2">
+                <div class="text">
+                    
+                </div>
+                <div class="image">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
     <footer >
 
-     <!-- FOOTER -->
     </footer>
     <script src="js/carousel.js"></script>
 </body>
