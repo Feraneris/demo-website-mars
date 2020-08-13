@@ -5,9 +5,7 @@
 }
 body{
     font: normal 400 17px "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
-    background-color: #fff;
-    color: #1d1d1f;
-    background: #f1f1f1;
+    background-color: #000;
     header{
         position: fixed;
         top: 0;
@@ -124,7 +122,9 @@ body{
             border: 0;
             border-radius:50%;
             width: 40px;
-            height: 40px;              
+            height: 40px; 
+            // hide arrows 
+            display: none;            
         }
         .left{
             left:10px;
@@ -199,13 +199,19 @@ body{
         margin: 0 auto;
         //max-width: 980px;
         width: 100%;
-        display: flex;
-        flex-direction: column;
+        //display: flex;
+        //flex-direction: column;
         .company{
-            height: 600px;
+            height: 800px;
             display: flex;
             flex-direction: column;
             position: relative;
+            @media only screen and (max-width:1200px){
+                height: 600px;
+            }
+            @media only screen and (max-width:1800px) and (min-width:1201px){
+                height: 700px;
+            }
             .name-logo{
                 background-color: #000;
                 //background-image:url('/img/title-bg.png');
@@ -218,39 +224,92 @@ body{
                 }
             }
             .content{
-                height: 450px;
+                height: 650px;
                 position: relative;
                 overflow: hidden;
+                display: flex;
+                flex-direction: row;
+                @media only screen and (max-width:1200px){
+                    height: 450px;
+                }
+                @media only screen and (max-width:1800px) and (min-width:1201px){
+                    height: 550px;
+                }
                 .image{
-                    position: absolute;
-                    height: 650px;
-                    width: 690px;
+                    position: relative;
+                    height: 1200px;
+                    width: 1200px;
+                    flex: 3;
                     transform: rotate(15deg);
                     overflow: hidden;
-                    background: red;
+                    background: #000;
                     z-index: 1;
-                        img{
-                            position: absolute;
-                            top: 70px;
-                            width: 120%;
-                            height: 100%;
-                            object-fit: cover; 
-                            transform: rotate(-15deg);
-                            //scale: 1.21;
-                        }
+
+                    @media only screen and (max-width:1200px){
+                        height: 650px;
+                        width: 700px;
+                    }
+                    @media only screen and (max-width:1800px) and (min-width:1201px){
+                        height: 800px;
+                        width: 800px;
+                    }
+                    img{
+                        position: absolute;
+                        width: 120%;
+                        height: 100%;
+                        object-fit: cover; 
+                        transform: rotate(-15deg);
+                    }
                 }
                 .text{
-                    position: absolute;
-                    height: 450px;
-                    width: 490px;
-                    
-                    //background-color: #555;
+                    position: relative;
+                    height: 650px;
+                    flex: 2;
+                    display: flex;
+                    flex-direction: column;
+                    // since flex-direction is column, justify-content is acting as align-items, they switched positions.
+                    justify-content: center; 
+                    padding: 0px 40px;
+                    text-indent: 40px;
+                    line-height: 2;
+                    word-spacing: 0px;
+                    text-align: justify;
+                    background-color: #000;
+                    color: #f1f1f1;
+                    @media only screen and (max-width:1200px){
+                        height: 450px;
+                    }
+                    @media only screen and (max-width:1800px) and (min-width:1201px){
+                        height: 550px;
+                    }
                 }
             }
             .set1{
                 .image{
-                    left:-75px;
-                    top: -100px;
+                    left:-100px;
+                    top: -250px;
+                    img{
+                        top: 170px;
+                        left: 140px;
+                        width: 120%;
+                        height: 100%;
+                    }
+                    @media only screen and (max-width:1200px){
+                        left: -40px;
+                        top: -150px;
+                        img{
+                            top: 100px;
+                            left: 50px;
+                        }
+                    }
+                    @media only screen and (max-width:1800px) and (min-width:1201px){
+                        left:-75px;
+                        top: -150px;
+                        img{
+                            top: 100px;
+                            left: 100px;
+                        }
+                    }
                 }
                 .text{
                     right:0;
@@ -258,8 +317,30 @@ body{
             }
             .set2{
                 .image{
-                    right:-75px;
-                    top: -75px;
+                    right:-100px;
+                    top: -250px;
+                    img{
+                        top: 170px;
+                        right: -50px;
+                        width: 120%;
+                        height: 100%;
+                    }
+                    @media only screen and (max-width:1200px){
+                        right: -40px;
+                        top: -100px;
+                        img{
+                            top: 80px;
+                            right: -50px;
+                        }
+                    }
+                    @media only screen and (max-width:1800px) and (min-width:1201px){
+                        right:-75px;
+                        top: -105px;
+                        img{
+                            top: 100px;
+                            right: -50px;
+                        }
+                    }
                 }
                 .text{
                     left:0;
@@ -273,14 +354,6 @@ body{
             :first-child{
                 img{
                     height:150px;
-                }
-            }
-            :last-child{
-                :last-child{
-                    img{
-                        top: unset;
-                        left: -70px;
-                    }
                 }
             }
         }
