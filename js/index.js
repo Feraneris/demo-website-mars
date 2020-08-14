@@ -55,7 +55,7 @@ setInterval(()=>{
         nextIndex = 0;
         nextSlide = slides[0];
         nextDot = dots[0];
-        console.log("set");
+        //console.log("set");
     } else {
         nextSlide = currentSlide.nextElementSibling;
         nextIndex = slides.findIndex(slide => slide === nextSlide);
@@ -112,3 +112,16 @@ dotsNav.addEventListener('click', e => {
 
     //console.log(targetIndex);
 });
+
+
+// testing content swapping
+// document.getElementById("missions").addEventListener("click", function() {
+//     var x=document.getElementById("page-main");
+//     if(x.style.display==="block"){
+//         x.style.display="none";
+//         document.getElementById("page-mission-01").style.display="flex";
+//     } else {
+//         x.style.display="block";
+//         document.getElementById("page-mission-01").style.display="none";
+//     }
+// });

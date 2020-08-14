@@ -3,12 +3,17 @@
   padding: 0;
 }
 
-body {
+html, body {
+  height: 100%;
   font: normal 400 17px "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
   background-color: #000;
 }
 
-body header {
+html #container, body #container {
+  min-height: 100%;
+}
+
+html #container header, body #container header {
   position: fixed;
   top: 0;
   right: 0;
@@ -27,14 +32,14 @@ body header {
           user-select: none;
 }
 
-body header nav {
+html #container header nav, body #container header nav {
   position: relative;
   margin: 0 auto;
   max-width: 980px;
   padding: 0 22px;
 }
 
-body header nav .list {
+html #container header nav .list, body #container header nav .list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,7 +53,7 @@ body header nav .list {
   list-style: none;
 }
 
-body header nav .list .item a {
+html #container header nav .list .item, body #container header nav .list .item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,25 +65,26 @@ body header nav .list .item a {
   height: 40px;
 }
 
-body header nav .list .item a:hover {
+html #container header nav .list .item:hover, body #container header nav .list .item:hover {
   color: #f1f1f1;
+  cursor: pointer;
 }
 
-body header nav .list .logo {
+html #container header nav .list .logo, body #container header nav .list .logo {
   width: 300px;
   height: 300px;
   position: relative;
   background-color: transparent;
 }
 
-body header nav .list .logo #mars {
+html #container header nav .list .logo #mars, body #container header nav .list .logo #mars {
   position: absolute;
   height: 32px;
   top: 134px;
   left: 134px;
 }
 
-body header nav .list .logo #rocket {
+html #container header nav .list .logo #rocket, body #container header nav .list .logo #rocket {
   position: absolute;
   height: 16px;
   -webkit-animation: fly 8s linear infinite;
@@ -151,14 +157,20 @@ body header nav .list .logo #rocket {
   }
 }
 
-body .carousel {
+html #container #page-main, body #container #page-main {
+  overflow: auto;
+  padding-bottom: 200px;
+  display: block;
+}
+
+html #container #page-main .carousel, body #container #page-main .carousel {
   position: relative;
   margin-top: 40px;
   height: 800px;
   width: 100%;
 }
 
-body .carousel .title {
+html #container #page-main .carousel .title, body #container #page-main .carousel .title {
   position: absolute;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -171,7 +183,7 @@ body .carousel .title {
   z-index: 1;
 }
 
-body .carousel .carousel_button {
+html #container #page-main .carousel .carousel_button, body #container #page-main .carousel .carousel_button {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -194,40 +206,40 @@ body .carousel .carousel_button {
   display: none;
 }
 
-body .carousel .left {
+html #container #page-main .carousel .left, body #container #page-main .carousel .left {
   left: 10px;
   z-index: 1;
 }
 
-body .carousel .left img {
+html #container #page-main .carousel .left img, body #container #page-main .carousel .left img {
   -webkit-transform: translateX(-10%);
           transform: translateX(-10%);
   width: 24px;
 }
 
-body .carousel .right {
+html #container #page-main .carousel .right, body #container #page-main .carousel .right {
   right: 10px;
   z-index: 1;
 }
 
-body .carousel .right img {
+html #container #page-main .carousel .right img, body #container #page-main .carousel .right img {
   -webkit-transform: translateX(10%);
           transform: translateX(10%);
   width: 24px;
 }
 
-body .carousel .is-hidden {
+html #container #page-main .carousel .is-hidden, body #container #page-main .carousel .is-hidden {
   display: none;
 }
 
-body .carousel .carousel_track-container {
+html #container #page-main .carousel .carousel_track-container, body #container #page-main .carousel .carousel_track-container {
   background-color: #fff;
   position: relative;
   height: 100%;
   overflow: hidden;
 }
 
-body .carousel .carousel_track-container .carousel_track {
+html #container #page-main .carousel .carousel_track-container .carousel_track, body #container #page-main .carousel .carousel_track-container .carousel_track {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -239,21 +251,21 @@ body .carousel .carousel_track-container .carousel_track {
   transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
 }
 
-body .carousel .carousel_track-container .carousel_track .carousel_slide {
+html #container #page-main .carousel .carousel_track-container .carousel_track .carousel_slide, body #container #page-main .carousel .carousel_track-container .carousel_track .carousel_slide {
   position: absolute;
   top: 0;
   bottom: 0;
   width: 100%;
 }
 
-body .carousel .carousel_track-container .carousel_track .carousel_slide .carousel_image {
+html #container #page-main .carousel .carousel_track-container .carousel_track .carousel_slide .carousel_image, body #container #page-main .carousel .carousel_track-container .carousel_track .carousel_slide .carousel_image {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-body .carousel .carousel_nav {
+html #container #page-main .carousel .carousel_nav, body #container #page-main .carousel .carousel_nav {
   position: absolute;
   width: 100%;
   display: -webkit-box;
@@ -265,7 +277,7 @@ body .carousel .carousel_nav {
   top: 95%;
 }
 
-body .carousel .carousel_nav .carousel_indicator {
+html #container #page-main .carousel .carousel_nav .carousel_indicator, body #container #page-main .carousel .carousel_nav .carousel_indicator {
   position: relative;
   border: 0;
   border-radius: 50%;
@@ -278,20 +290,20 @@ body .carousel .carousel_nav .carousel_indicator {
   transition: 0.2s;
 }
 
-body .carousel .carousel_nav .current-slide {
+html #container #page-main .carousel .carousel_nav .current-slide, body #container #page-main .carousel .carousel_nav .current-slide {
   background: rgba(255, 255, 255, 0.4);
   scale: 1.2;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
-body .companies {
+html #container #page-main .companies, body #container #page-main .companies {
   position: relative;
   margin: 0 auto;
   width: 100%;
 }
 
-body .companies .company {
+html #container #page-main .companies .company, body #container #page-main .companies .company {
   height: 800px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -304,20 +316,20 @@ body .companies .company {
 }
 
 @media only screen and (max-width: 1200px) {
-  body .companies .company {
+  html #container #page-main .companies .company, body #container #page-main .companies .company {
     height: 600px;
   }
 }
 
 @media only screen and (max-width: 1800px) and (min-width: 1201px) {
-  body .companies .company {
+  html #container #page-main .companies .company, body #container #page-main .companies .company {
     height: 700px;
   }
 }
 
-body .companies .company .name-logo {
+html #container #page-main .companies .company .name-logo, body #container #page-main .companies .company .name-logo {
   background-color: #000;
-  height: 150px;
+  height: 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -327,13 +339,14 @@ body .companies .company .name-logo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-top: 2px solid #333;
 }
 
-body .companies .company .name-logo img {
+html #container #page-main .companies .company .name-logo img, body #container #page-main .companies .company .name-logo img {
   height: 130px;
 }
 
-body .companies .company .content {
+html #container #page-main .companies .company .content, body #container #page-main .companies .company .content {
   height: 650px;
   position: relative;
   overflow: hidden;
@@ -347,18 +360,18 @@ body .companies .company .content {
 }
 
 @media only screen and (max-width: 1200px) {
-  body .companies .company .content {
+  html #container #page-main .companies .company .content, body #container #page-main .companies .company .content {
     height: 450px;
   }
 }
 
 @media only screen and (max-width: 1800px) and (min-width: 1201px) {
-  body .companies .company .content {
+  html #container #page-main .companies .company .content, body #container #page-main .companies .company .content {
     height: 550px;
   }
 }
 
-body .companies .company .content .image {
+html #container #page-main .companies .company .content .image, body #container #page-main .companies .company .content .image {
   position: relative;
   height: 1200px;
   width: 1200px;
@@ -373,20 +386,20 @@ body .companies .company .content .image {
 }
 
 @media only screen and (max-width: 1200px) {
-  body .companies .company .content .image {
+  html #container #page-main .companies .company .content .image, body #container #page-main .companies .company .content .image {
     height: 650px;
     width: 700px;
   }
 }
 
 @media only screen and (max-width: 1800px) and (min-width: 1201px) {
-  body .companies .company .content .image {
+  html #container #page-main .companies .company .content .image, body #container #page-main .companies .company .content .image {
     height: 800px;
     width: 800px;
   }
 }
 
-body .companies .company .content .image img {
+html #container #page-main .companies .company .content .image img, body #container #page-main .companies .company .content .image img {
   position: absolute;
   width: 120%;
   height: 100%;
@@ -396,7 +409,7 @@ body .companies .company .content .image img {
           transform: rotate(-15deg);
 }
 
-body .companies .company .content .text {
+html #container #page-main .companies .company .content .text, body #container #page-main .companies .company .content .text {
   position: relative;
   height: 650px;
   -webkit-box-flex: 2;
@@ -417,28 +430,27 @@ body .companies .company .content .text {
   line-height: 2;
   word-spacing: 0px;
   text-align: justify;
-  background-color: #000;
   color: #f1f1f1;
 }
 
 @media only screen and (max-width: 1200px) {
-  body .companies .company .content .text {
+  html #container #page-main .companies .company .content .text, body #container #page-main .companies .company .content .text {
     height: 450px;
   }
 }
 
 @media only screen and (max-width: 1800px) and (min-width: 1201px) {
-  body .companies .company .content .text {
+  html #container #page-main .companies .company .content .text, body #container #page-main .companies .company .content .text {
     height: 550px;
   }
 }
 
-body .companies .company .set1 .image {
+html #container #page-main .companies .company .set1 .image, body #container #page-main .companies .company .set1 .image {
   left: -100px;
   top: -250px;
 }
 
-body .companies .company .set1 .image img {
+html #container #page-main .companies .company .set1 .image img, body #container #page-main .companies .company .set1 .image img {
   top: 170px;
   left: 140px;
   width: 120%;
@@ -446,37 +458,37 @@ body .companies .company .set1 .image img {
 }
 
 @media only screen and (max-width: 1200px) {
-  body .companies .company .set1 .image {
+  html #container #page-main .companies .company .set1 .image, body #container #page-main .companies .company .set1 .image {
     left: -40px;
     top: -150px;
   }
-  body .companies .company .set1 .image img {
+  html #container #page-main .companies .company .set1 .image img, body #container #page-main .companies .company .set1 .image img {
     top: 100px;
     left: 50px;
   }
 }
 
 @media only screen and (max-width: 1800px) and (min-width: 1201px) {
-  body .companies .company .set1 .image {
+  html #container #page-main .companies .company .set1 .image, body #container #page-main .companies .company .set1 .image {
     left: -75px;
     top: -150px;
   }
-  body .companies .company .set1 .image img {
+  html #container #page-main .companies .company .set1 .image img, body #container #page-main .companies .company .set1 .image img {
     top: 100px;
     left: 100px;
   }
 }
 
-body .companies .company .set1 .text {
+html #container #page-main .companies .company .set1 .text, body #container #page-main .companies .company .set1 .text {
   right: 0;
 }
 
-body .companies .company .set2 .image {
+html #container #page-main .companies .company .set2 .image, body #container #page-main .companies .company .set2 .image {
   right: -100px;
   top: -250px;
 }
 
-body .companies .company .set2 .image img {
+html #container #page-main .companies .company .set2 .image img, body #container #page-main .companies .company .set2 .image img {
   top: 170px;
   right: -50px;
   width: 120%;
@@ -484,36 +496,275 @@ body .companies .company .set2 .image img {
 }
 
 @media only screen and (max-width: 1200px) {
-  body .companies .company .set2 .image {
+  html #container #page-main .companies .company .set2 .image, body #container #page-main .companies .company .set2 .image {
     right: -40px;
     top: -100px;
   }
-  body .companies .company .set2 .image img {
+  html #container #page-main .companies .company .set2 .image img, body #container #page-main .companies .company .set2 .image img {
     top: 80px;
     right: -50px;
   }
 }
 
 @media only screen and (max-width: 1800px) and (min-width: 1201px) {
-  body .companies .company .set2 .image {
+  html #container #page-main .companies .company .set2 .image, body #container #page-main .companies .company .set2 .image {
     right: -75px;
     top: -105px;
   }
-  body .companies .company .set2 .image img {
+  html #container #page-main .companies .company .set2 .image img, body #container #page-main .companies .company .set2 .image img {
     top: 100px;
     right: -50px;
   }
 }
 
-body .companies .company .set2 .text {
+html #container #page-main .companies .company .set2 .text, body #container #page-main .companies .company .set2 .text {
   left: 0;
 }
 
-body .companies .spacex :first-child img {
+html #container #page-main .companies .spacex :first-child img, body #container #page-main .companies .spacex :first-child img {
   height: 150px;
 }
 
-body .companies .borigin :first-child img {
+html #container #page-main .companies .borigin :first-child img, body #container #page-main .companies .borigin :first-child img {
   height: 100px;
+}
+
+html #container #page-main .companies .transition, body #container #page-main .companies .transition {
+  background: -webkit-gradient(linear, left top, left bottom, from(black), to(#080302));
+  background: linear-gradient(black 0%, #080302 100%);
+}
+
+html #container #page-main #article, body #container #page-main #article {
+  padding-bottom: 10px;
+  height: 1200px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html #container #page-main #article img, body #container #page-main #article img {
+  height: 1200px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+}
+
+html #container #page-main #article .page, body #container #page-main #article .page {
+  position: absolute;
+  text-align: justify;
+  width: 70%;
+  max-width: 900px;
+  height: 900px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  -webkit-box-shadow: 0 0 80px 80px rgba(255, 81, 0, 0.1) inset;
+          box-shadow: 0 0 80px 80px rgba(255, 81, 0, 0.1) inset;
+  color: #f1f1f1;
+}
+
+html #container #page-main #article .page .title, body #container #page-main #article .page .title {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  height: 200px;
+  width: 100%;
+  font-size: 40px;
+}
+
+html #container #page-main #article .page .text, body #container #page-main #article .page .text {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 200px;
+  margin: 0 30px;
+  text-indent: 40px;
+  line-height: 2;
+  word-spacing: 0px;
+}
+
+html #container .page-missions, body #container .page-missions {
+  padding-bottom: 200px;
+  height: 1300px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 40px;
+  background-color: #f1f1f1;
+}
+
+html #container .page-missions .page, body #container .page-missions .page {
+  position: relative;
+  text-align: justify;
+  width: 70%;
+  max-width: 900px;
+  height: 1200px;
+  color: #0f0f0f;
+}
+
+html #container .page-missions .page .title, body #container .page-missions .page .title {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  height: 200px;
+  width: 100%;
+  font-size: 40px;
+}
+
+html #container .page-missions .page .image, body #container .page-missions .page .image {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 200px;
+  height: 500px;
+  width: 100%;
+}
+
+html #container .page-missions .page .image img, body #container .page-missions .page .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+html #container .page-missions .page .details, body #container .page-missions .page .details {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  top: 720px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  line-height: 2;
+  width: 100%;
+}
+
+html #container .page-missions .page .text, body #container .page-missions .page .text {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 860px;
+  text-indent: 40px;
+  line-height: 2;
+  word-spacing: 0px;
+}
+
+html #container #page-mission01, body #container #page-mission01 {
+  display: none;
+}
+
+html #container #page-mission02, body #container #page-mission02 {
+  display: none;
+}
+
+html #container #page-mission03, body #container #page-mission03 {
+  display: none;
+}
+
+html #container #page-mission04, body #container #page-mission04 {
+  display: none;
+}
+
+html #container #page-mission05, body #container #page-mission05 {
+  display: none;
+}
+
+html #container #page-mission06, body #container #page-mission06 {
+  display: none;
+}
+
+html #container #page-mission07, body #container #page-mission07 {
+  display: none;
+}
+
+html #container #page-mission08, body #container #page-mission08 {
+  display: none;
+}
+
+html footer, body footer {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  height: 200px;
+  margin-top: -200px;
+  clear: both;
+  background: #000;
+  color: #999;
 }
 /*# sourceMappingURL=index.css.map */

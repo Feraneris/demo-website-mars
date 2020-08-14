@@ -10,137 +10,242 @@
     <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="container">
+        <!-- NAVIGATION BAR -->
+        <header>
+            <nav>
+                <ul class="list">
+                    <li class="item logo">
+                        <a href=""><img id="mars" src="img/logo/mars.png" alt="Nasa"></a>
+                        <img id="rocket" src="img/logo/rocket.png" alt="Nasa">
+                    </li>
+                    <li class="item" id="missions">
+                        Missions
+                    </li>
+                    <li class="item">
+                        Facts
+                    </li>
+                    <li class="item">
+                        Reasons
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div id="page-main">
 
-     <!-- NAVIGATION BAR -->
-    <header>
-        <nav>
-            <ul class="list">
-                <li class="item logo">
-                    <a href=""><img id="mars" src="img/logo/mars.png" alt="Nasa"></a>
-                    <img id="rocket" src="img/logo/rocket.png" alt="Nasa">
-                </li>
-                <li class="item">
-                    <a href="">Missions</a>
-                </li>
-                <li class="item">
-                    <a href="">Facts</a>
-                </li>
-                <li class="item">
-                    <a href="">Reasons</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+            <!-- CAROUSEL IMAGES -->
+            <div class="carousel">
+                <div class="title">Living Beyond Earth</div>
+                <!-- left button -->
+                <button class="carousel_button left is-hidden">
+                    <img src="img/carousel-arrows/left-arrow.svg" alt="">
+                </button>
+                <!-- right button -->
+                <button class="carousel_button right">
+                    <img src="img/carousel-arrows/right-arrow.svg" alt="">
+                </button>       
+                <!-- images -->
+                <div class="carousel_track-container">
+                    <ul class="carousel_track">
+                        <li class="carousel_slide current-slide">
+                            <img class="carousel_image" src="img/carousel-slides/538180.jpg" alt="">        
+                        </li>
+                        <li class="carousel_slide">
+                            <img class="carousel_image" src="img/carousel-slides/538148.jpg" alt="">            
+                        </li>
+                        <li class="carousel_slide">
+                            <img class="carousel_image" src="img/carousel-slides/532768.jpg" alt="">    
+                        </li>
+                        <li class="carousel_slide">
+                            <img class="carousel_image" src="img/carousel-slides/slide-3.png" alt="">    
+                        </li>
+                        <li class="carousel_slide">
+                            <img class="carousel_image" src="img/carousel-slides/538145.jpg" alt="">    
+                        </li>
+                    </ul>
+                </div>
+                <!-- dot buttons -->
+                <div class="carousel_nav">
+                    <button class="carousel_indicator current-slide"></button>
+                    <button class="carousel_indicator"></button>
+                    <button class="carousel_indicator"></button>
+                    <button class="carousel_indicator"></button>
+                    <button class="carousel_indicator"></button>
+                </div>   
+            </div>
 
+            <!--companies-->
+            <div class="companies">
+                <!--NASA-->
+                <div class="company nasa">
+                    <div class="name-logo">
+                        <img src="img/companies/logos/nasa-logo.png" alt="">
+                    </div>
+                    <div class="content set1">
+                        <div class="image">
+                            <img src="img/companies/pictures/nasa-image.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <p>
+                                The Mercury, Gemini and Apollo programs helped NASA learn about flying in space and resulted in the first human landing on the Moon in 1969. Currently, NASA has astronauts living and working on the International Space Station.
+                            </p>
+                            <p>
+                                NASA’s robotic space probes have visited every planet in the solar system and several other celestial bodies. Telescopes have allowed scientists to look at the far reaches of space. Satellites have revealed a wealth of data about Earth, resulting in valuable information such as a better understanding of weather patterns.
+                            </p> 
+                        </div>
+                    </div>
+                </div>
+                <!--SpaceX-->
+                <div class="company spacex">
+                    <div class="name-logo">
+                        <img src="img/companies/logos/spacex-logo.jpg" alt="">
+                    </div>
+                    <div class="content set2">
+                        <div class="text">
+                            <p>
+                                Founded in 2002 by Elon Musk with the goal of reducing space transportation costs to enable the colonization of Mars. SpaceX has developed several launch vehicles, the Starlink satellite constellation, the Dragon cargo spacecraft, and flown humans to the International Space Station on the Crew Dragon Demo-2.
+                            </p>
+                            <p>
+                                Starship — a privately funded launch system to develop spaceflight technology for use in crewed interplanetary spaceflight. In 2017, Musk unveiled an updated configuration of the system which is intended to handle interplanetary missions plus become the primary SpaceX orbital vehicle after the early 2020s.
+                            </p> 
+                        </div>
+                        <div class="image">
+                            <img src="img/companies/pictures/spacex-image.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!--Blue Origin-->
+                <div class="company borigin">
+                    <div class="name-logo ">
+                        <img src="img/companies/logos/borigin-logo.png" alt="">
+                    </div>
+                    <div class="content set1 transition">
+                        <div class="image">
+                            <img src="img/companies/pictures/blue-origin-image.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <p>
+                                Founded in 2000 by Jeff Bezos, the company is led by CEO Bob Smith and is developing technologies to enable private human access to space with the goal to dramatically lower costs and increase reliability. Blue Origin is employing an incremental approach from suborbital to orbital flight, with each developmental step building on its prior work. 
+                            </p>
+                            <p>
+                                In May 2019, Jeff Bezos unveiled Blue Origin's vision for space and also plans for a moon lander known as "Blue Moon",[12] set to be ready by 2024.[13] The Blue Moon Lander ended up being selected by NASA on April 30th, 2020 as a winner of the Human Lander Systems award under the Next Space Technologies for Exploration Partnerships (NextSTEP-2), alongside competing companies SpaceX and Dynetics. 
+                            </p> 
+                        </div>
+                    </div>
+                </div>
+                
+            </div>         
+            <script src="js/index.js"></script>
+
+            <div id="article">
+                <img src="img/missions-background.jpg" alt="">
+                <div class="page">
+                    <div class="title">
+                        title area here
+                    </div>
+                    <div class="text">
+                        <span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rhoncus, tellus non scelerisque bibendum, turpis lorem condimentum neque, vitae vestibulum metus arcu ut metus. Nullam dictum, nibh sit amet faucibus aliquet, odio dolor rhoncus est, in malesuada arcu diam eu mauris. Aenean vitae nunc fringilla, gravida urna vitae, accumsan ante. Sed condimentum diam at leo hendrerit gravida. Donec suscipit condimentum ipsum eu elementum. 
+                        </span>
+                        <span>
+                            Ut ut lobortis augue, in sollicitudin orci. Nunc fringilla arcu nec hendrerit ultrices. In nisi odio, ultrices vitae varius eu, cursus vel libero. Fusce sit amet euismod urna. Sed mi eros, porttitor sit amet tortor et, porttitor efficitur dolor. Fusce cursus accumsan neque, eget venenatis diam luctus eget. Aliquam ullamcorper.
+                        <span>
+                        </span>
+                            Pellentesque et mauris in nibh efficitur luctus. Integer accumsan a augue nec scelerisque. Phasellus volutpat metus eu pellentesque porta. Praesent ut lectus velit.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div id="page-mission01" class="page-missions">
+        <div class="page">
+            <div class="title">
+                InSight (Discovery Mission)
+            </div>
+            <div class="text">
+                <p>
+                    InSight (Interior Exploration using Seismic Investigations, Geodesy and Heat Transport) is a NASA Discovery Program mission that will place a single geophysical lander on Mars to study its deep interior. But InSight is more than a Mars mission - it is a terrestrial planet explorer that will address one of the most fundamental issues of planetary and solar system science - understanding the processes that shaped the rocky planets of the inner solar system (including Earth) more than four billion years ago. 
+                </p>
+                <p>
+                    By using sophisticated geophysical instruments, InSight will delve deep beneath the surface of Mars, detecting the fingerprints of the processes of terrestrial planet formation, as well as measuring the planet's "vital signs": Its "pulse" (seismology), "temperature" (heat flow probe), and "reflexes" (precision tracking).
+                </p>
+                <p>
+                    InSight seeks to answer one of science's most fundamental questions: How did the terrestrial planets form?
+                </p>
+            </div>
+            <div class="details">
+                <p>
+                    <b>MISSION TYPE</b><br><p>Lander</p>
+                </p>
+                <p>
+                    <b>LAUNCHED</b><br><p>May 5, 2018</p>
+                </p>
+                <p>
+                    <b>LAUNCH VEHICLE</b><br><p>Atlas V 401</p>
+                </p>
+                <p>
+                    <b>LAUNCH LOCATION</b><br><p>Vandenberg Air Force Base, California</p>
+                </p>
+                <p>
+                    <b>LANDED</b><br><p>Nov. 26, 2018</p>
+                </p>
+                <p>
+                    <b>LANDING SITE</b><br><p>Elysium Planitia, Mars</p>
+                </p>
+            </div>
+            <div class="image">
+                <img src="img/missions/mission01.jpg" alt="">
+            </div>
+        </div>  
+    </div>
+    <div id="page-mission02" class="page-missions">
+        <!-- <img src="img/missions-background.jpg" alt=""> -->
+        <div class="page">
+            <div class="title">
+                ExoMars 2016 Mission (ESA/Roscosmos)
+            </div>
+            <div class="text">
+                <p>
+                    InSight (Interior Exploration using Seismic Investigations, Geodesy and Heat Transport) is a NASA Discovery Program mission that will place a single geophysical lander on Mars to study its deep interior. But InSight is more than a Mars mission - it is a terrestrial planet explorer that will address one of the most fundamental issues of planetary and solar system science - understanding the processes that shaped the rocky planets of the inner solar system (including Earth) more than four billion years ago. 
+                </p>
+                <p>
+                    By using sophisticated geophysical instruments, InSight will delve deep beneath the surface of Mars, detecting the fingerprints of the processes of terrestrial planet formation, as well as measuring the planet's "vital signs": Its "pulse" (seismology), "temperature" (heat flow probe), and "reflexes" (precision tracking).
+                </p>
+                <p>
+                    InSight seeks to answer one of science's most fundamental questions: How did the terrestrial planets form?
+                </p>
+            </div>
+            <div class="details">
+                <p>
+                    <b>MISSION TYPE</b><br><p>Lander</p>
+                </p>
+                <p>
+                    <b>LAUNCHED</b><br><p>May 5, 2018</p>
+                </p>
+                <p>
+                    <b>LAUNCH VEHICLE</b><br><p>Atlas V 401</p>
+                </p>
+                <p>
+                    <b>LAUNCH LOCATION</b><br><p>Vandenberg Air Force Base, California</p>
+                </p>
+                <p>
+                    <b>LANDED</b><br><p>Nov. 26, 2018</p>
+                </p>
+                <p>
+                    <b>LANDING SITE</b><br><p>Elysium Planitia, Mars</p>
+                </p>
+            </div>
+            <div class="image">
+                <img src="img/missions/mission02.jpg" alt="">
+            </div>
+        </div>
+    </div>    
+</div>
     
-
-     <!-- CAROUSEL IMAGES -->
-    <div class="carousel">
-        <div class="title">Living Beyond Earth</div>
-         <!-- left button -->
-        <button class="carousel_button left is-hidden">
-            <img src="img/carousel-arrows/left-arrow.svg" alt="">
-        </button>
-         <!-- right button -->
-        <button class="carousel_button right">
-            <img src="img/carousel-arrows/right-arrow.svg" alt="">
-        </button>       
-         <!-- images -->
-        <div class="carousel_track-container">
-            <ul class="carousel_track">
-                <li class="carousel_slide current-slide">
-                    <img class="carousel_image" src="img/carousel-slides/538180.jpg" alt="">        
-                </li>
-                <li class="carousel_slide">
-                    <img class="carousel_image" src="img/carousel-slides/538148.jpg" alt="">            
-                </li>
-                <li class="carousel_slide">
-                    <img class="carousel_image" src="img/carousel-slides/532768.jpg" alt="">    
-                </li>
-                <li class="carousel_slide">
-                    <img class="carousel_image" src="img/carousel-slides/slide-3.png" alt="">    
-                </li>
-                <li class="carousel_slide">
-                    <img class="carousel_image" src="img/carousel-slides/538145.jpg" alt="">    
-                </li>
-            </ul>
-        </div>
-        <!-- dot buttons -->
-        <div class="carousel_nav">
-            <button class="carousel_indicator current-slide"></button>
-            <button class="carousel_indicator"></button>
-            <button class="carousel_indicator"></button>
-            <button class="carousel_indicator"></button>
-            <button class="carousel_indicator"></button>
-        </div>   
-    </div>
-
-    <!--companies-->
-    <div class="companies">
-        <!--NASA-->
-        <div class="company nasa">
-            <div class="name-logo">
-                <img src="img/companies/logos/nasa-logo.png" alt="">
-            </div>
-            <div class="content set1">
-                <div class="image">
-                    <img src="img/companies/pictures/nasa-image.jpg" alt="">
-                </div>
-                <div class="text">
-                    <span>
-                        The Mercury, Gemini and Apollo programs helped NASA learn about flying in space and resulted in the first human landing on the Moon in 1969. Currently, NASA has astronauts living and working on the International Space Station.
-                    </span>
-                    <span>
-                        NASA’s robotic space probes have visited every planet in the solar system and several other celestial bodies. Telescopes have allowed scientists to look at the far reaches of space. Satellites have revealed a wealth of data about Earth, resulting in valuable information such as a better understanding of weather patterns.
-                    </span> 
-                </div>
-            </div>
-        </div>
-        <!--SpaceX-->
-        <div class="company spacex">
-            <div class="name-logo">
-                <img src="img/companies/logos/spacex-logo.jpg" alt="">
-            </div>
-            <div class="content set2">
-                <div class="text">
-                    <span>
-                        Founded in 2002 by Elon Musk with the goal of reducing space transportation costs to enable the colonization of Mars. SpaceX has developed several launch vehicles, the Starlink satellite constellation, the Dragon cargo spacecraft, and flown humans to the International Space Station on the Crew Dragon Demo-2.
-                    </span>
-                    <span>
-                        Starship — a privately funded launch system to develop spaceflight technology for use in crewed interplanetary spaceflight. In 2017, Musk unveiled an updated configuration of the system which is intended to handle interplanetary missions plus become the primary SpaceX orbital vehicle after the early 2020s.
-                    </span> 
-                </div>
-                <div class="image">
-                    <img src="img/companies/pictures/spacex-image.jpg" alt="">
-                </div>
-            </div>
-        </div>
-        <!--Blue Origin-->
-        <div class="company borigin">
-            <div class="name-logo ">
-                <img src="img/companies/logos/borigin-logo.png" alt="">
-            </div>
-            <div class="content set1">
-                <div class="image">
-                    <img src="img/companies/pictures/blue-origin-image.jpg" alt="">
-                </div>
-                <div class="text">
-                    <span>
-                        Founded in 2000 by Jeff Bezos, the company is led by CEO Bob Smith and is developing technologies to enable private human access to space with the goal to dramatically lower costs and increase reliability. Blue Origin is employing an incremental approach from suborbital to orbital flight, with each developmental step building on its prior work. 
-                    </span>
-                    <span>
-                        In May 2019, Jeff Bezos unveiled Blue Origin's vision for space and also plans for a moon lander known as "Blue Moon",[12] set to be ready by 2024.[13] The Blue Moon Lander ended up being selected by NASA on April 30th, 2020 as a winner of the Human Lander Systems award under the Next Space Technologies for Exploration Partnerships (NextSTEP-2), alongside competing companies SpaceX and Dynetics. 
-                    </span> 
-                </div>
-            </div>
-        </div>
-        
-    </div>
-
     <!-- FOOTER -->
     <footer >
-
+        Demo Website: Mars - Living Beyond Earth <br>
+        <script>document.write(new Date().getFullYear());</script>
     </footer>
-    <script src="js/carousel.js"></script>
 </body>
 </html>
