@@ -9,11 +9,7 @@ html, body {
   background-color: #000;
 }
 
-html #container, body #container {
-  min-height: 100%;
-}
-
-html #container header, body #container header {
+html header, body header {
   position: fixed;
   top: 0;
   right: 0;
@@ -32,7 +28,7 @@ html #container header, body #container header {
           user-select: none;
 }
 
-html #container header nav, body #container header nav {
+html header nav, body header nav {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -46,7 +42,7 @@ html #container header nav, body #container header nav {
   height: 40px;
 }
 
-html #container header nav .logo, body #container header nav .logo {
+html header nav .logo, body header nav .logo {
   width: 300px;
   height: 300px;
   position: absolute;
@@ -61,14 +57,14 @@ html #container header nav .logo, body #container header nav .logo {
           align-items: center;
 }
 
-html #container header nav .logo #mars, body #container header nav .logo #mars {
+html header nav .logo #mars, body header nav .logo #mars {
   position: absolute;
   height: 32px;
   top: 134px;
   left: 134px;
 }
 
-html #container header nav .logo #rocket, body #container header nav .logo #rocket {
+html header nav .logo #rocket, body header nav .logo #rocket {
   position: absolute;
   height: 16px;
   -webkit-animation: fly 8s linear infinite;
@@ -141,7 +137,7 @@ html #container header nav .logo #rocket, body #container header nav .logo #rock
   }
 }
 
-html #container header nav .list, body #container header nav .list {
+html header nav .list, body header nav .list {
   position: absolute;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -161,7 +157,7 @@ html #container header nav .list, body #container header nav .list {
   list-style: none;
 }
 
-html #container header nav .list .item, body #container header nav .list .item {
+html header nav .list .item, body header nav .list .item {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -177,12 +173,12 @@ html #container header nav .list .item, body #container header nav .list .item {
   width: 120px;
 }
 
-html #container header nav .list .item:hover, body #container header nav .list .item:hover {
+html header nav .list .item:hover, body header nav .list .item:hover {
   color: #f1f1f1;
   cursor: pointer;
 }
 
-html #container header nav .list #dropdown-box, body #container header nav .list #dropdown-box {
+html header nav .list #dropdown-box, body header nav .list #dropdown-box {
   position: absolute;
   background-color: transparent;
   width: unset;
@@ -197,36 +193,58 @@ html #container header nav .list #dropdown-box, body #container header nav .list
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border-radius: 4px;
 }
 
-html #container header nav .list #dropdown-box #pointer, body #container header nav .list #dropdown-box #pointer {
+html header nav .list #dropdown-box #pointer, body header nav .list #dropdown-box #pointer {
   position: absolute;
   background-color: transparent;
-  width: 12px;
-  height: 12px;
-  top: -6px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  width: 14px;
+  height: 14px;
+  top: -9px;
+  border-radius: 50%;
 }
 
-html #container header nav .list #dropdown-box .menu, body #container header nav .list #dropdown-box .menu {
+html header nav .list #dropdown-box #bridge, body header nav .list #dropdown-box #bridge {
+  position: absolute;
+  background-color: transparent;
+  width: 300px;
+  height: 4px;
+  top: -4px;
+}
+
+html header nav .list #dropdown-box .menu, body header nav .list #dropdown-box .menu {
   position: relative;
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
+  visibility: hidden;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: lightcoral;
+  margin: 40px;
+  color: #d55b4e;
+  list-style: none;
+}
+
+html header nav .list #dropdown-box .menu .menu-item, body header nav .list #dropdown-box .menu .menu-item {
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+html header nav .list #dropdown-box .menu .menu-item:hover, body header nav .list #dropdown-box .menu .menu-item:hover {
+  color: #000;
+}
+
+html #container, body #container {
+  min-height: 100%;
 }
 
 html #container #page-main, body #container #page-main {
@@ -687,9 +705,7 @@ html #container .page-missions, body #container .page-missions {
   position: relative;
   height: 100%;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -798,44 +814,89 @@ html #container .page-missions .page .text p, body #container .page-missions .pa
   margin-top: 10px;
 }
 
-html #container #page-mission01, body #container #page-mission01 {
+html #container .page-reasons, body #container .page-reasons {
+  padding-bottom: 200px;
+  position: relative;
+  height: 100%;
+  width: 100%;
   display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 40px;
+  background-color: #f1f1f1;
 }
 
-html #container #page-mission02, body #container #page-mission02 {
-  display: none;
+html #container .page-reasons .page, body #container .page-reasons .page {
+  position: relative;
+  text-align: justify;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: 100%;
+  width: 90%;
+  max-width: 980px;
+  color: #0f0f0f;
 }
 
-html #container #page-mission03, body #container #page-mission03 {
-  display: none;
+html #container .page-reasons .page .title, body #container .page-reasons .page .title {
+  position: relative;
+  text-align: center;
+  padding: 50px 0;
+  width: 100%;
+  font-size: 40px;
 }
 
-html #container #page-mission04, body #container #page-mission04 {
-  display: none;
+html #container .page-reasons .page .image, body #container .page-reasons .page .image {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding-top: 56.25%;
+  overflow: hidden;
 }
 
-html #container #page-mission05, body #container #page-mission05 {
-  display: none;
+html #container .page-reasons .page .image img, body #container .page-reasons .page .image img {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-html #container #page-mission06, body #container #page-mission06 {
-  display: none;
+html #container .page-reasons .page .text, body #container .page-reasons .page .text {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 40px 0;
+  line-height: 1.8;
+  word-spacing: 0px;
 }
 
-html #container #page-mission07, body #container #page-mission07 {
-  display: none;
-}
-
-html #container #page-mission08, body #container #page-mission08 {
-  display: none;
-}
-
-html #container #page-mission09, body #container #page-mission09 {
-  display: none;
-}
-
-html #container #page-mission10, body #container #page-mission10 {
-  display: none;
+html #container .page-reasons .page .text p, body #container .page-reasons .page .text p {
+  margin-top: 10px;
 }
 
 html footer, body footer {

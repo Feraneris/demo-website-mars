@@ -129,33 +129,70 @@ dotsNav.addEventListener('click', e => {
 const missions = document.getElementById("nav-missions");
 const facts = document.getElementById("nav-facts");
 const reasons = document.getElementById("nav-reasons");
-const page = document.getElementById("page-main");
+const page = document.getElementById("container");
 const dropdownBox = document.getElementById("dropdown-box");
 const pointer = document.getElementById("pointer");
+const menuMissions = document.getElementById("menu-missions");
+const menuFacts = document.getElementById("menu-facts");
+const menuReasons = document.getElementById("menu-reasons");
 
 missions.onmouseenter = () => {
-    dropdownBox.style.width="320px";
-    dropdownBox.style.height="120px";
-    dropdownBox.style.right="140px";
-    dropdownBox.style.background="#fff";
-    pointer.style.background="#fff";
+    menuFacts.style.display="none";
+    menuReasons.style.display="none";
+    menuMissions.style.display="flex";
+    menuMissions.style.transitionDelay="0.2s";
+    dropdownBox.style.width="fit-content";
+    dropdownBox.style.height="fit-content";
+    dropdownBox.style.right="120px";
+    dropdownBox.style.background="rgba(255,255,255,0.9)";
+    pointer.style.background="rgb(213, 91, 78)";
+    menuMissions.style.visibility="visible";
 }
 facts.onmouseenter = () => {
-    dropdownBox.style.width="220px";
-    dropdownBox.style.height="220px";
-    dropdownBox.style.right="70px";
-    dropdownBox.style.background="#fff";
-    pointer.style.background="#fff";
+    menuMissions.style.display="none";
+    menuReasons.style.display="none";
+    menuFacts.style.display="flex";
+    menuFacts.style.transitionDelay="0.2s";
+    dropdownBox.style.width="fit-content";
+    dropdownBox.style.height="fit-content";
+    dropdownBox.style.right="95px";
+    dropdownBox.style.background="rgba(255,255,255,0.9)";
+    pointer.style.background="rgb(213, 91, 78)";
+    menuFacts.style.visibility="visible";
 }
 reasons.onmouseenter = () => {
-    dropdownBox.style.width="200px";
-    dropdownBox.style.height="160px";
-    dropdownBox.style.right="-40px";
-    dropdownBox.style.background="#fff";
-    pointer.style.background="#fff";
+    menuMissions.style.display="none";
+    menuFacts.style.display="none";
+    menuReasons.style.display="flex";
+    menuReasons.style.transitionDelay="0.2s";
+    dropdownBox.style.width="fit-content";
+    dropdownBox.style.height="fit-content";
+    dropdownBox.style.right="-115px";
+    dropdownBox.style.background="rgba(255,255,255,0.9)";
+    pointer.style.background="rgb(213, 91, 78)";
+    menuReasons.style.visibility="visible";
 }
+
+// remove box
 page.onmouseenter = () => {
+    menuMissions.style.transitionDelay="0s";
+    menuFacts.style.transitionDelay="0s";
+    menuReasons.style.transitionDelay="0s";
+    menuMissions.style.visibility="hidden";
+    menuFacts.style.visibility="hidden";
+    menuReasons.style.visibility="hidden";
     dropdownBox.style.background="transparent";
     dropdownBox.style.height="0";
     pointer.style.background="transparent";
+
+}
+
+var previousPage = document.getElementById("page-main");
+var currentPage;
+
+switchPage = (clickedPage) => {
+    previousPage.style.display="none";
+    currentPage = document.getElementById(clickedPage.id+"p");
+    currentPage.style.display="flex";
+    previousPage = currentPage;
 }
