@@ -18,79 +18,134 @@ html, body{
             display: block;
             margin: 0;
             width: 100%;
-            min-width: 1024px;
+            min-width: 500px;
             height: 40px;
             background: rgba($color: #000, $alpha: 0.9);
-            
+            //background-color: lightgreen;
             font-size: 17px;
             user-select: none;
             nav{
                 position: relative;
+                display: flex;
+                justify-content: center;
                 margin: 0 auto;
+                width: 100%;
                 max-width: 980px;
-                padding: 0 22px;
-                .list{
+                height: 40px;
+                //background-color: lightcoral;
+                .logo{
+                    width: 300px;
+                    height: 300px;
+                    position: absolute;
+                    top: -130px;
+                    left: -100px;
+                    background-color: transparent;
+                    //background-color: #999;
                     display: flex;
-                    justify-content: space-between;
-                    height: 40px;
+                    align-items: center;              
+                    #mars{
+                        position: absolute;
+                        height: 32px;
+                        top: 134px;
+                        left: 134px;
+                    }
+                    #rocket{
+                        position: absolute;
+                        height: 16px;
+                        animation: fly 8s linear infinite;  
+                    }
+                    @keyframes fly {
+                        0%   {left:0px; top:115px; transform: rotate(60deg);}
+                        25%  {left:124px; top:134px; transform: rotate(-115deg);}
+                        50%  {left:124px; top:134px; transform: rotate(-115deg);}
+                        75%  {left:124px; top:134px; transform: rotate(-115deg);}
+                        100% {left:0px; top:100px; transform: rotate(-100deg);}
+                    }  
+                } 
+                // .logo{
+                //     width: 100px;
+                //     height: 100px;
+                //     position: relative;
+                //     #mars{
+                //         position: absolute;
+                //         height: 32px;
+                //         top: 34px;
+                //         left: 34px;
+                //     }
+                //     #rocket{
+                //         position: absolute;
+                //         height: 16px;
+                //         animation: fly 6s linear infinite;  
+                //     }
+                //     @keyframes fly {
+                //         0%   {left:0px; top:0px; transform: rotate(-225deg);}
+                //         25%  {left:0px; top:84px; transform: rotate(-225deg);}
+                //         50%  {left:84px; top:84px; transform: rotate(-45deg);}
+                //         75%  {left:84px; top:0px; transform: rotate(-45deg);}
+                //         100% {left:0px; top:0px; transform: rotate(-225deg);}
+                //     }  
+                // } 
+                .list{
+                    position: absolute;
+                    //right: 0;
+                    width: fit-content;
+                    height: fit-content;
+                    display: flex;
+                    justify-content: flex-end;
                     align-items: center;
                     list-style: none;
+                    //background-color: lightslategrey;
                     .item{
+                        position: relative;
                         display: flex;
                         align-items: center;
-                        text-decoration:none;
+                        justify-content: center;
                         color: #dbdbdb;
                         height: 40px;
-                        &:hover{color: #f1f1f1; cursor: pointer;}                       
+                        width: 120px;
+                        //background-color: lightyellow;
+                        //border: 1px solid #000;
+                        &:hover{color: #f1f1f1; cursor: pointer;} 
                     }
-                    .logo{
-                        width: 300px;
-                        height: 300px;
-                        position: relative;
-                        //left:-0px;
+                    #dropdown-box{
+                        position: absolute;
                         background-color: transparent;
-                        #mars{
+                        width: unset;
+                        height: unset;
+                        right: unset;
+                        top: 44px;
+                        transition: 0.3s;
+                        display: flex;
+                        justify-content: center;
+                        //box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+                        #pointer{
                             position: absolute;
-                            height: 32px;
-                            top: 134px;
-                            left: 134px;
+                            background-color: transparent;
+                            width: 12px;
+                            height: 12px;
+                            top: -6px;
+                            transform: rotate(45deg);
                         }
-                        #rocket{
-                            position: absolute;
-                            height: 16px;
-                            animation: fly 8s linear infinite;  
+                        .menu{
+                            position: relative;
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            flex-direction: column;
+                            background: lightcoral;
                         }
-                        @keyframes fly {
-                            0%   {left:0px; top:115px; transform: rotate(60deg);}
-                            25%  {left:124px; top:134px; transform: rotate(-115deg);}
-                            50%  {left:124px; top:134px; transform: rotate(-115deg);}
-                            75%  {left:124px; top:134px; transform: rotate(-115deg);}
-                            100% {left:0px; top:100px; transform: rotate(-100deg);}
-                        }  
-                    } 
-                    // .logo{
-                    //     width: 100px;
-                    //     height: 100px;
-                    //     position: relative;
-                    //     #mars{
-                    //         position: absolute;
-                    //         height: 32px;
-                    //         top: 34px;
-                    //         left: 34px;
-                    //     }
-                    //     #rocket{
-                    //         position: absolute;
-                    //         height: 16px;
-                    //         animation: fly 6s linear infinite;  
-                    //     }
-                    //     @keyframes fly {
-                    //         0%   {left:0px; top:0px; transform: rotate(-225deg);}
-                    //         25%  {left:0px; top:84px; transform: rotate(-225deg);}
-                    //         50%  {left:84px; top:84px; transform: rotate(-45deg);}
-                    //         75%  {left:84px; top:0px; transform: rotate(-45deg);}
-                    //         100% {left:0px; top:0px; transform: rotate(-225deg);}
-                    //     }  
-                    // } 
+                        #menu-missions{
+                            
+                        }
+                        #menu-facts{
+
+                        }
+                        #menu-reasons{
+
+                        }
+                    }
                 }
             }
         }
@@ -414,7 +469,11 @@ html, body{
         }
         .page-missions{
             padding-bottom: 200px;
-            height: 1300px;
+
+            position: relative;
+            height: 100%;
+
+            //height: 1300px;
             width: 100%;
             display: flex;
             justify-content: center;
@@ -424,62 +483,67 @@ html, body{
             .page{
                 position: relative;
                 text-align: justify;
-                width: 70%;
-                max-width:900px;
-                height: 1200px;
-                //background-color: rgba($color: #000, $alpha: 0.5);
-                //border-radius: 20px;
-                //box-shadow: 0 0 80px 80px rgba($color: rgb(255, 81, 0), $alpha: 0.1) inset;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                //background-color: lightcoral;
+                height: 100%;
+
+                width: 90%;
+                max-width:980px;
                 //border: 2px solid #000000;
                 color: #0f0f0f;
                 .title{
-                    position: absolute;
-                    display: flex;
-                    justify-content:center;
-                    align-items:center;
-                    top: 0;
-                    height: 200px;
+                    position: relative;
+                    text-align: center;
+                    padding: 50px 0;
                     width: 100%;
                     //background-color: pink;
                     font-size: 40px;
                 }
                 .image{
-                    position: absolute;
+                    position: relative;
                     display: flex;
                     justify-content:center;
                     align-items:center;
-                    top: 200px;
-                    height: 500px;
                     width: 100%;
+                    //height:  56.25%;
+                    padding-top: 56.25%;
+                    //background-color: red;
+                    overflow: hidden;
                     img{
-                        height: 100%;
+                        top: 0;
+                        position: absolute;
                         width: 100%;
+                        //max-height:  56.25%;
                         object-fit: cover;
                     }
                 }
                 .details{
-                    position: absolute;
+                    position: relative;
                     display: flex;
-                    justify-content:space-around;
+                    flex-direction: row;
+                    justify-content:space-between;
                     flex-wrap: wrap;
                     align-items:flex-start;
-                    top: 720px;
                     height: fit-content;
                     line-height: 2;
                     width: 100%;
+                    margin-top: 20px;
+                    //background-color: lightblue;
+                    td{padding: 0 10px;}
                 }
                 .text{
-                    position: absolute;
+                    position: relative;
                     display: flex;
                     flex-direction:column;
-                    justify-content: flex-start;
-                    align-items: center;
-                    top: 860px;
-                    //margin: 0 30px;
-                    text-indent: 40px;
-                    line-height: 2;
+                    margin: 40px 0;
+                    //text-indent: 20px;
+                    line-height: 1.8;
                     word-spacing: 0px;
-                    
+                    //background-color: lightgreen; 
+                    p{margin-top:10px;}                 
                 }
             }
         }
@@ -494,6 +558,8 @@ html, body{
         #page-mission06{display:none;}
         #page-mission07{display:none;}
         #page-mission08{display:none;}
+        #page-mission09{display:none;}
+        #page-mission10{display:none;}
     }
     footer{
         position: relative;

@@ -125,3 +125,37 @@ dotsNav.addEventListener('click', e => {
 //         document.getElementById("page-mission-01").style.display="none";
 //     }
 // });
+
+const missions = document.getElementById("nav-missions");
+const facts = document.getElementById("nav-facts");
+const reasons = document.getElementById("nav-reasons");
+const page = document.getElementById("page-main");
+const dropdownBox = document.getElementById("dropdown-box");
+const pointer = document.getElementById("pointer");
+
+missions.onmouseenter = () => {
+    dropdownBox.style.width="320px";
+    dropdownBox.style.height="120px";
+    dropdownBox.style.right="140px";
+    dropdownBox.style.background="#fff";
+    pointer.style.background="#fff";
+}
+facts.onmouseenter = () => {
+    dropdownBox.style.width="220px";
+    dropdownBox.style.height="220px";
+    dropdownBox.style.right="70px";
+    dropdownBox.style.background="#fff";
+    pointer.style.background="#fff";
+}
+reasons.onmouseenter = () => {
+    dropdownBox.style.width="200px";
+    dropdownBox.style.height="160px";
+    dropdownBox.style.right="-40px";
+    dropdownBox.style.background="#fff";
+    pointer.style.background="#fff";
+}
+page.onmouseenter = () => {
+    dropdownBox.style.background="transparent";
+    dropdownBox.style.height="0";
+    pointer.style.background="transparent";
+}
