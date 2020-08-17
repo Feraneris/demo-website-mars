@@ -15,7 +15,12 @@ html header, body header {
   right: 0;
   left: 0;
   z-index: 99;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0;
   width: 100%;
   min-width: 500px;
@@ -33,12 +38,7 @@ html header nav, body header nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 980px;
+  width: 550px;
   height: 40px;
 }
 
@@ -139,6 +139,7 @@ html header nav .logo #rocket, body header nav .logo #rocket {
 
 html header nav .list, body header nav .list {
   position: absolute;
+  right: 0;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -214,14 +215,15 @@ html header nav .list #dropdown-box #bridge, body header nav .list #dropdown-box
 }
 
 html header nav .list #dropdown-box .menu, body header nav .list #dropdown-box .menu {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100%;
-  display: none;
+  top: 20px;
+  left: 30px;
   visibility: hidden;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -229,8 +231,11 @@ html header nav .list #dropdown-box .menu, body header nav .list #dropdown-box .
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 40px;
-  color: #d55b4e;
+  color: transparent;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
   list-style: none;
 }
 
@@ -247,20 +252,20 @@ html #container, body #container {
   min-height: 100%;
 }
 
-html #container #page-main, body #container #page-main {
+html #container #homep, body #container #homep {
   overflow: auto;
   padding-bottom: 200px;
   display: block;
 }
 
-html #container #page-main .carousel, body #container #page-main .carousel {
+html #container #homep .carousel, body #container #homep .carousel {
   position: relative;
   margin-top: 40px;
   height: 800px;
   width: 100%;
 }
 
-html #container #page-main .carousel .title, body #container #page-main .carousel .title {
+html #container #homep .carousel .title, body #container #homep .carousel .title {
   position: absolute;
   height: -webkit-fit-content;
   height: -moz-fit-content;
@@ -273,7 +278,7 @@ html #container #page-main .carousel .title, body #container #page-main .carouse
   z-index: 1;
 }
 
-html #container #page-main .carousel .carousel_button, body #container #page-main .carousel .carousel_button {
+html #container #homep .carousel .carousel_button, body #container #homep .carousel .carousel_button {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -296,40 +301,40 @@ html #container #page-main .carousel .carousel_button, body #container #page-mai
   display: none;
 }
 
-html #container #page-main .carousel .left, body #container #page-main .carousel .left {
+html #container #homep .carousel .left, body #container #homep .carousel .left {
   left: 10px;
   z-index: 1;
 }
 
-html #container #page-main .carousel .left img, body #container #page-main .carousel .left img {
+html #container #homep .carousel .left img, body #container #homep .carousel .left img {
   -webkit-transform: translateX(-10%);
           transform: translateX(-10%);
   width: 24px;
 }
 
-html #container #page-main .carousel .right, body #container #page-main .carousel .right {
+html #container #homep .carousel .right, body #container #homep .carousel .right {
   right: 10px;
   z-index: 1;
 }
 
-html #container #page-main .carousel .right img, body #container #page-main .carousel .right img {
+html #container #homep .carousel .right img, body #container #homep .carousel .right img {
   -webkit-transform: translateX(10%);
           transform: translateX(10%);
   width: 24px;
 }
 
-html #container #page-main .carousel .is-hidden, body #container #page-main .carousel .is-hidden {
+html #container #homep .carousel .is-hidden, body #container #homep .carousel .is-hidden {
   display: none;
 }
 
-html #container #page-main .carousel .carousel_track-container, body #container #page-main .carousel .carousel_track-container {
+html #container #homep .carousel .carousel_track-container, body #container #homep .carousel .carousel_track-container {
   background-color: #fff;
   position: relative;
   height: 100%;
   overflow: hidden;
 }
 
-html #container #page-main .carousel .carousel_track-container .carousel_track, body #container #page-main .carousel .carousel_track-container .carousel_track {
+html #container #homep .carousel .carousel_track-container .carousel_track, body #container #homep .carousel .carousel_track-container .carousel_track {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -341,21 +346,21 @@ html #container #page-main .carousel .carousel_track-container .carousel_track, 
   transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
 }
 
-html #container #page-main .carousel .carousel_track-container .carousel_track .carousel_slide, body #container #page-main .carousel .carousel_track-container .carousel_track .carousel_slide {
+html #container #homep .carousel .carousel_track-container .carousel_track .carousel_slide, body #container #homep .carousel .carousel_track-container .carousel_track .carousel_slide {
   position: absolute;
   top: 0;
   bottom: 0;
   width: 100%;
 }
 
-html #container #page-main .carousel .carousel_track-container .carousel_track .carousel_slide .carousel_image, body #container #page-main .carousel .carousel_track-container .carousel_track .carousel_slide .carousel_image {
+html #container #homep .carousel .carousel_track-container .carousel_track .carousel_slide .carousel_image, body #container #homep .carousel .carousel_track-container .carousel_track .carousel_slide .carousel_image {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-html #container #page-main .carousel .carousel_nav, body #container #page-main .carousel .carousel_nav {
+html #container #homep .carousel .carousel_nav, body #container #homep .carousel .carousel_nav {
   position: absolute;
   width: 100%;
   display: -webkit-box;
@@ -367,7 +372,7 @@ html #container #page-main .carousel .carousel_nav, body #container #page-main .
   top: 95%;
 }
 
-html #container #page-main .carousel .carousel_nav .carousel_indicator, body #container #page-main .carousel .carousel_nav .carousel_indicator {
+html #container #homep .carousel .carousel_nav .carousel_indicator, body #container #homep .carousel .carousel_nav .carousel_indicator {
   position: relative;
   border: 0;
   border-radius: 50%;
@@ -380,20 +385,20 @@ html #container #page-main .carousel .carousel_nav .carousel_indicator, body #co
   transition: 0.2s;
 }
 
-html #container #page-main .carousel .carousel_nav .current-slide, body #container #page-main .carousel .carousel_nav .current-slide {
+html #container #homep .carousel .carousel_nav .current-slide, body #container #homep .carousel .carousel_nav .current-slide {
   background: rgba(255, 255, 255, 0.4);
   scale: 1.2;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
-html #container #page-main .companies, body #container #page-main .companies {
+html #container #homep .companies, body #container #homep .companies {
   position: relative;
   margin: 0 auto;
   width: 100%;
 }
 
-html #container #page-main .companies .company, body #container #page-main .companies .company {
+html #container #homep .companies .company, body #container #homep .companies .company {
   height: 800px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -406,18 +411,18 @@ html #container #page-main .companies .company, body #container #page-main .comp
 }
 
 @media only screen and (max-width: 1200px) {
-  html #container #page-main .companies .company, body #container #page-main .companies .company {
+  html #container #homep .companies .company, body #container #homep .companies .company {
     height: 600px;
   }
 }
 
 @media only screen and (max-width: 1800px) and (min-width: 1201px) {
-  html #container #page-main .companies .company, body #container #page-main .companies .company {
+  html #container #homep .companies .company, body #container #homep .companies .company {
     height: 700px;
   }
 }
 
-html #container #page-main .companies .company .name-logo, body #container #page-main .companies .company .name-logo {
+html #container #homep .companies .company .name-logo, body #container #homep .companies .company .name-logo {
   background-color: #000;
   height: 200px;
   display: -webkit-box;
@@ -432,11 +437,11 @@ html #container #page-main .companies .company .name-logo, body #container #page
   border-top: 2px solid #333;
 }
 
-html #container #page-main .companies .company .name-logo img, body #container #page-main .companies .company .name-logo img {
+html #container #homep .companies .company .name-logo img, body #container #homep .companies .company .name-logo img {
   height: 130px;
 }
 
-html #container #page-main .companies .company .content, body #container #page-main .companies .company .content {
+html #container #homep .companies .company .content, body #container #homep .companies .company .content {
   height: 650px;
   position: relative;
   overflow: hidden;
@@ -450,18 +455,18 @@ html #container #page-main .companies .company .content, body #container #page-m
 }
 
 @media only screen and (max-width: 1200px) {
-  html #container #page-main .companies .company .content, body #container #page-main .companies .company .content {
+  html #container #homep .companies .company .content, body #container #homep .companies .company .content {
     height: 450px;
   }
 }
 
 @media only screen and (max-width: 1800px) and (min-width: 1201px) {
-  html #container #page-main .companies .company .content, body #container #page-main .companies .company .content {
+  html #container #homep .companies .company .content, body #container #homep .companies .company .content {
     height: 550px;
   }
 }
 
-html #container #page-main .companies .company .content .image, body #container #page-main .companies .company .content .image {
+html #container #homep .companies .company .content .image, body #container #homep .companies .company .content .image {
   position: relative;
   height: 1200px;
   width: 1200px;
@@ -476,20 +481,20 @@ html #container #page-main .companies .company .content .image, body #container 
 }
 
 @media only screen and (max-width: 1200px) {
-  html #container #page-main .companies .company .content .image, body #container #page-main .companies .company .content .image {
+  html #container #homep .companies .company .content .image, body #container #homep .companies .company .content .image {
     height: 650px;
     width: 700px;
   }
 }
 
 @media only screen and (max-width: 1800px) and (min-width: 1201px) {
-  html #container #page-main .companies .company .content .image, body #container #page-main .companies .company .content .image {
+  html #container #homep .companies .company .content .image, body #container #homep .companies .company .content .image {
     height: 800px;
     width: 800px;
   }
 }
 
-html #container #page-main .companies .company .content .image img, body #container #page-main .companies .company .content .image img {
+html #container #homep .companies .company .content .image img, body #container #homep .companies .company .content .image img {
   position: absolute;
   width: 120%;
   height: 100%;
@@ -499,7 +504,7 @@ html #container #page-main .companies .company .content .image img, body #contai
           transform: rotate(-15deg);
 }
 
-html #container #page-main .companies .company .content .text, body #container #page-main .companies .company .content .text {
+html #container #homep .companies .company .content .text, body #container #homep .companies .company .content .text {
   position: relative;
   height: 650px;
   -webkit-box-flex: 2;
@@ -524,23 +529,23 @@ html #container #page-main .companies .company .content .text, body #container #
 }
 
 @media only screen and (max-width: 1200px) {
-  html #container #page-main .companies .company .content .text, body #container #page-main .companies .company .content .text {
+  html #container #homep .companies .company .content .text, body #container #homep .companies .company .content .text {
     height: 450px;
   }
 }
 
 @media only screen and (max-width: 1800px) and (min-width: 1201px) {
-  html #container #page-main .companies .company .content .text, body #container #page-main .companies .company .content .text {
+  html #container #homep .companies .company .content .text, body #container #homep .companies .company .content .text {
     height: 550px;
   }
 }
 
-html #container #page-main .companies .company .set1 .image, body #container #page-main .companies .company .set1 .image {
+html #container #homep .companies .company .set1 .image, body #container #homep .companies .company .set1 .image {
   left: -100px;
   top: -250px;
 }
 
-html #container #page-main .companies .company .set1 .image img, body #container #page-main .companies .company .set1 .image img {
+html #container #homep .companies .company .set1 .image img, body #container #homep .companies .company .set1 .image img {
   top: 170px;
   left: 140px;
   width: 120%;
@@ -548,37 +553,37 @@ html #container #page-main .companies .company .set1 .image img, body #container
 }
 
 @media only screen and (max-width: 1200px) {
-  html #container #page-main .companies .company .set1 .image, body #container #page-main .companies .company .set1 .image {
+  html #container #homep .companies .company .set1 .image, body #container #homep .companies .company .set1 .image {
     left: -40px;
     top: -150px;
   }
-  html #container #page-main .companies .company .set1 .image img, body #container #page-main .companies .company .set1 .image img {
+  html #container #homep .companies .company .set1 .image img, body #container #homep .companies .company .set1 .image img {
     top: 100px;
     left: 50px;
   }
 }
 
 @media only screen and (max-width: 1800px) and (min-width: 1201px) {
-  html #container #page-main .companies .company .set1 .image, body #container #page-main .companies .company .set1 .image {
+  html #container #homep .companies .company .set1 .image, body #container #homep .companies .company .set1 .image {
     left: -75px;
     top: -150px;
   }
-  html #container #page-main .companies .company .set1 .image img, body #container #page-main .companies .company .set1 .image img {
+  html #container #homep .companies .company .set1 .image img, body #container #homep .companies .company .set1 .image img {
     top: 100px;
     left: 100px;
   }
 }
 
-html #container #page-main .companies .company .set1 .text, body #container #page-main .companies .company .set1 .text {
+html #container #homep .companies .company .set1 .text, body #container #homep .companies .company .set1 .text {
   right: 0;
 }
 
-html #container #page-main .companies .company .set2 .image, body #container #page-main .companies .company .set2 .image {
+html #container #homep .companies .company .set2 .image, body #container #homep .companies .company .set2 .image {
   right: -100px;
   top: -250px;
 }
 
-html #container #page-main .companies .company .set2 .image img, body #container #page-main .companies .company .set2 .image img {
+html #container #homep .companies .company .set2 .image img, body #container #homep .companies .company .set2 .image img {
   top: 170px;
   right: -50px;
   width: 120%;
@@ -586,45 +591,45 @@ html #container #page-main .companies .company .set2 .image img, body #container
 }
 
 @media only screen and (max-width: 1200px) {
-  html #container #page-main .companies .company .set2 .image, body #container #page-main .companies .company .set2 .image {
+  html #container #homep .companies .company .set2 .image, body #container #homep .companies .company .set2 .image {
     right: -40px;
     top: -100px;
   }
-  html #container #page-main .companies .company .set2 .image img, body #container #page-main .companies .company .set2 .image img {
+  html #container #homep .companies .company .set2 .image img, body #container #homep .companies .company .set2 .image img {
     top: 80px;
     right: -50px;
   }
 }
 
 @media only screen and (max-width: 1800px) and (min-width: 1201px) {
-  html #container #page-main .companies .company .set2 .image, body #container #page-main .companies .company .set2 .image {
+  html #container #homep .companies .company .set2 .image, body #container #homep .companies .company .set2 .image {
     right: -75px;
     top: -105px;
   }
-  html #container #page-main .companies .company .set2 .image img, body #container #page-main .companies .company .set2 .image img {
+  html #container #homep .companies .company .set2 .image img, body #container #homep .companies .company .set2 .image img {
     top: 100px;
     right: -50px;
   }
 }
 
-html #container #page-main .companies .company .set2 .text, body #container #page-main .companies .company .set2 .text {
+html #container #homep .companies .company .set2 .text, body #container #homep .companies .company .set2 .text {
   left: 0;
 }
 
-html #container #page-main .companies .spacex :first-child img, body #container #page-main .companies .spacex :first-child img {
+html #container #homep .companies .spacex :first-child img, body #container #homep .companies .spacex :first-child img {
   height: 150px;
 }
 
-html #container #page-main .companies .borigin :first-child img, body #container #page-main .companies .borigin :first-child img {
+html #container #homep .companies .borigin :first-child img, body #container #homep .companies .borigin :first-child img {
   height: 100px;
 }
 
-html #container #page-main .companies .transition, body #container #page-main .companies .transition {
+html #container #homep .companies .transition, body #container #homep .companies .transition {
   background: -webkit-gradient(linear, left top, left bottom, from(black), to(#080302));
   background: linear-gradient(black 0%, #080302 100%);
 }
 
-html #container #page-main #article, body #container #page-main #article {
+html #container #homep #article, body #container #homep #article {
   padding-bottom: 10px;
   height: 1200px;
   width: 100%;
@@ -639,7 +644,7 @@ html #container #page-main #article, body #container #page-main #article {
           align-items: center;
 }
 
-html #container #page-main #article img, body #container #page-main #article img {
+html #container #homep #article img, body #container #homep #article img {
   height: 1200px;
   width: 100%;
   -o-object-fit: cover;
@@ -648,7 +653,7 @@ html #container #page-main #article img, body #container #page-main #article img
           filter: blur(5px);
 }
 
-html #container #page-main #article .page, body #container #page-main #article .page {
+html #container #homep #article .page, body #container #homep #article .page {
   position: absolute;
   text-align: justify;
   width: 70%;
@@ -661,7 +666,7 @@ html #container #page-main #article .page, body #container #page-main #article .
   color: #f1f1f1;
 }
 
-html #container #page-main #article .page .title, body #container #page-main #article .page .title {
+html #container #homep #article .page .title, body #container #homep #article .page .title {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -678,7 +683,7 @@ html #container #page-main #article .page .title, body #container #page-main #ar
   font-size: 40px;
 }
 
-html #container #page-main #article .page .text, body #container #page-main #article .page .text {
+html #container #homep #article .page .text, body #container #homep #article .page .text {
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -706,12 +711,6 @@ html #container .page-missions, body #container .page-missions {
   height: 100%;
   width: 100%;
   display: none;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   margin-top: 40px;
   background-color: #f1f1f1;
 }
@@ -719,6 +718,7 @@ html #container .page-missions, body #container .page-missions {
 html #container .page-missions .page, body #container .page-missions .page {
   position: relative;
   text-align: justify;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -820,12 +820,6 @@ html #container .page-reasons, body #container .page-reasons {
   height: 100%;
   width: 100%;
   display: none;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
   margin-top: 40px;
   background-color: #f1f1f1;
 }
@@ -836,6 +830,7 @@ html #container .page-reasons .page, body #container .page-reasons .page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0 auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;

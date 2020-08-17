@@ -135,64 +135,113 @@ const pointer = document.getElementById("pointer");
 const menuMissions = document.getElementById("menu-missions");
 const menuFacts = document.getElementById("menu-facts");
 const menuReasons = document.getElementById("menu-reasons");
+const home = document.getElementById("home");
 
 missions.onmouseenter = () => {
-    menuFacts.style.display="none";
-    menuReasons.style.display="none";
+    menuFacts.style.transition="0s";
+    menuFacts.style.transitionDelay="0s";
+    menuReasons.style.transition="0s";
+    menuReasons.style.transitionDelay="0s";
     menuMissions.style.display="flex";
+    menuMissions.style.transition="0.5s";
     menuMissions.style.transitionDelay="0.2s";
-    dropdownBox.style.width="fit-content";
-    dropdownBox.style.height="fit-content";
-    dropdownBox.style.right="120px";
+    dropdownBox.style.width="400px";
+    dropdownBox.style.height="370px";
+    dropdownBox.style.right="100px";
     dropdownBox.style.background="rgba(255,255,255,0.9)";
+    menuMissions.style.color="rgb(213, 91, 78)";
     pointer.style.background="rgb(213, 91, 78)";
+    menuFacts.style.visibility="hidden";
+    menuReasons.style.visibility="hidden";
     menuMissions.style.visibility="visible";
+    menuFacts.style.color="transparent";
+    menuReasons.style.color="transparent";
 }
 facts.onmouseenter = () => {
-    menuMissions.style.display="none";
-    menuReasons.style.display="none";
+    menuMissions.style.transition="0s";
+    menuMissions.style.transitionDelay="0s";
+    menuReasons.style.transition="0s";
+    menuReasons.style.transitionDelay="0s";
     menuFacts.style.display="flex";
+    menuFacts.style.transition="0.5s";
     menuFacts.style.transitionDelay="0.2s";
-    dropdownBox.style.width="fit-content";
-    dropdownBox.style.height="fit-content";
-    dropdownBox.style.right="95px";
+    dropdownBox.style.width="160px";
+    dropdownBox.style.height="200px";
+    dropdownBox.style.right="100px";
     dropdownBox.style.background="rgba(255,255,255,0.9)";
+    menuFacts.style.color="rgb(213, 91, 78)";
     pointer.style.background="rgb(213, 91, 78)";
+    menuMissions.style.visibility="hidden";
+    menuReasons.style.visibility="hidden";
     menuFacts.style.visibility="visible";
+    menuMissions.style.color="transparent";
+    menuReasons.style.color="transparent";
 }
 reasons.onmouseenter = () => {
-    menuMissions.style.display="none";
-    menuFacts.style.display="none";
+    menuFacts.style.transition="0s";
+    menuFacts.style.transitionDelay="0s";
+    menuMissions.style.transition="0s";
+    menuMissions.style.transitionDelay="0s";
     menuReasons.style.display="flex";
+    menuReasons.style.transition="0.5s";
     menuReasons.style.transitionDelay="0.2s";
-    dropdownBox.style.width="fit-content";
-    dropdownBox.style.height="fit-content";
+    dropdownBox.style.width="350px";
+    dropdownBox.style.height="170px";
     dropdownBox.style.right="-115px";
     dropdownBox.style.background="rgba(255,255,255,0.9)";
+    menuReasons.style.color="rgb(213, 91, 78)";
     pointer.style.background="rgb(213, 91, 78)";
+    menuMissions.style.visibility="hidden";
+    menuFacts.style.visibility="hidden";
     menuReasons.style.visibility="visible";
+    menuFacts.style.color="transparent";
+    menuMissions.style.color="transparent";
 }
 
-// remove box
+// remove dropdown box
 page.onmouseenter = () => {
+    menuMissions.style.transition="0s";
     menuMissions.style.transitionDelay="0s";
+    menuFacts.style.transition="0s";
     menuFacts.style.transitionDelay="0s";
+    menuReasons.style.transition="0s";
     menuReasons.style.transitionDelay="0s";
     menuMissions.style.visibility="hidden";
     menuFacts.style.visibility="hidden";
     menuReasons.style.visibility="hidden";
+    menuMissions.style.color="transparent";
+    menuFacts.style.color="transparent";
+    menuReasons.style.color="transparent";
     dropdownBox.style.background="transparent";
     dropdownBox.style.height="0";
     pointer.style.background="transparent";
-
 }
 
-var previousPage = document.getElementById("page-main");
+home.onmouseenter = () => {
+    menuMissions.style.transition="0s";
+    menuMissions.style.transitionDelay="0s";
+    menuFacts.style.transition="0s";
+    menuFacts.style.transitionDelay="0s";
+    menuReasons.style.transition="0s";
+    menuReasons.style.transitionDelay="0s";
+    menuMissions.style.visibility="hidden";
+    menuFacts.style.visibility="hidden";
+    menuReasons.style.visibility="hidden";
+    menuMissions.style.color="transparent";
+    menuFacts.style.color="transparent";
+    menuReasons.style.color="transparent";
+    dropdownBox.style.background="transparent";
+    dropdownBox.style.height="0";
+    pointer.style.background="transparent";
+}
+
+const homePage = document.getElementById("homep");
+var previousPage = homePage;
 var currentPage;
 
 switchPage = (clickedPage) => {
     previousPage.style.display="none";
     currentPage = document.getElementById(clickedPage.id+"p");
-    currentPage.style.display="flex";
+    currentPage.style.display="block";
     previousPage = currentPage;
 }

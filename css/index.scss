@@ -13,7 +13,8 @@ html, body{
         right: 0;
         left: 0;
         z-index: 99;
-        display: block;
+        display: flex;
+        justify-content: center;
         margin: 0;
         width: 100%;
         min-width: 500px;
@@ -24,10 +25,11 @@ html, body{
         nav{
             position: relative;
             display: flex;
-            justify-content: center;
-            margin: 0 auto;
-            width: 100%;
-            max-width: 980px;
+            //justify-content: center;
+            //margin: 0 auto;
+            width: 550px;
+            //max-width: 980px;
+            //background-color:lightpink;
             height: 40px;
             .logo{
                 width: 300px;
@@ -59,7 +61,7 @@ html, body{
             } 
             .list{
                 position: absolute;
-                //right: 0;
+                right: 0;
                 width: fit-content;
                 height: fit-content;
                 display: flex;
@@ -108,29 +110,31 @@ html, body{
                         top: -4px;
                     }
                     .menu{
-                        position: relative;
+                        position: absolute;
                         width: 100%;
                         height: 100%;
-                        display: none;
+                        top: 20px;
+                        left: 30px;
                         visibility:hidden;
-                        justify-content: center;
+                        justify-content: flex-start;
                         align-items: flex-start;
                         flex-direction: column;
-                        margin: 40px;
-                        //background: lightcoral;
-                        color: rgb(213, 91, 78);
-                        //transition-delay: 0.5s;
+                        color: transparent;
+                        transition: 0.5s;
+                        transition-delay: 0.2s;
                         list-style: none;
+                        //background: lightpink;
                         .menu-item{
                             margin-top: 10px;
                             cursor: pointer;
+                            //transition-delay: 1.5s;
                             &:hover{
                                 color: #000;
                             }
                         }
                     }
                     #menu-missions{
-
+                        
                     }
                     #menu-facts{
 
@@ -145,7 +149,7 @@ html, body{
     #container{
         min-height: 100%;
         
-        #page-main{
+        #homep{
             overflow: auto;
             padding-bottom: 200px;
             display: block; // block
@@ -469,14 +473,12 @@ html, body{
             height: 100%;
             width: 100%;
             display: none;
-            justify-content: center;
-            align-items: flex-start;
             margin-top: 40px;
             background-color: #f1f1f1;
             .page{
                 position: relative;
                 text-align: justify;
-
+                margin: 0 auto;
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
@@ -547,14 +549,13 @@ html, body{
             height: 100%;
             width: 100%;
             display: none;
-            justify-content: center;
-            align-items: flex-start;
             margin-top: 40px;
             background-color: #f1f1f1;
             .page{
                 position: relative;
                 text-align: justify;
                 display: flex;
+                margin: 0 auto;
                 flex-direction: column;
                 justify-content: flex-start;
                 height: 100%;
