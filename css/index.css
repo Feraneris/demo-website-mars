@@ -23,7 +23,6 @@ html header, body header {
           justify-content: center;
   margin: 0;
   width: 100%;
-  min-width: 500px;
   height: 40px;
   background: rgba(0, 0, 0, 0.9);
   font-size: 17px;
@@ -38,7 +37,8 @@ html header nav, body header nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 550px;
+  width: 100%;
+  max-width: 480px;
   height: 40px;
 }
 
@@ -57,11 +57,17 @@ html header nav .logo, body header nav .logo {
           align-items: center;
 }
 
-html header nav .logo #mars, body header nav .logo #mars {
+html header nav .logo #home, body header nav .logo #home {
   position: absolute;
   height: 32px;
   top: 134px;
   left: 134px;
+  z-index: 1;
+}
+
+html header nav .logo #home:hover, body header nav .logo #home:hover {
+  color: #f1f1f1;
+  cursor: pointer;
 }
 
 html header nav .logo #rocket, body header nav .logo #rocket {
@@ -138,20 +144,17 @@ html header nav .logo #rocket, body header nav .logo #rocket {
 }
 
 html header nav .list, body header nav .list {
-  position: absolute;
-  right: 0;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  position: relative;
+  width: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -171,12 +174,19 @@ html header nav .list .item, body header nav .list .item {
           justify-content: center;
   color: #dbdbdb;
   height: 40px;
-  width: 120px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 100px;
 }
 
 html header nav .list .item:hover, body header nav .list .item:hover {
   color: #f1f1f1;
   cursor: pointer;
+}
+
+html header nav .list #filler, body header nav .list #filler {
+  width: 80px;
 }
 
 html header nav .list #dropdown-box, body header nav .list #dropdown-box {

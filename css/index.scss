@@ -17,7 +17,7 @@ html, body{
         justify-content: center;
         margin: 0;
         width: 100%;
-        min-width: 500px;
+        //min-width: 500px;
         height: 40px;
         background: rgba($color: #000, $alpha: 0.9);
         font-size: 17px;
@@ -27,7 +27,8 @@ html, body{
             display: flex;
             //justify-content: center;
             //margin: 0 auto;
-            width: 550px;
+            width: 100%;
+            max-width:480px;
             //max-width: 980px;
             //background-color:lightpink;
             height: 40px;
@@ -40,11 +41,13 @@ html, body{
                 background-color: transparent;
                 display: flex;
                 align-items: center;              
-                #mars{
+                #home{
                     position: absolute;
                     height: 32px;
                     top: 134px;
                     left: 134px;
+                    z-index: 1;
+                    &:hover{color: #f1f1f1; cursor: pointer;}
                 }
                 #rocket{
                     position: absolute;
@@ -60,15 +63,13 @@ html, body{
                 }  
             } 
             .list{
-                position: absolute;
-                right: 0;
-                width: fit-content;
+                position: relative;
+                width: 100%;
                 height: fit-content;
                 display: flex;
-                justify-content: flex-end;
+                justify-content: center;
                 align-items: center;
                 list-style: none;
-                //background-color: lightslategrey;
                 .item{
                     position: relative;
                     display: flex;
@@ -76,10 +77,14 @@ html, body{
                     justify-content: center;
                     color: #dbdbdb;
                     height: 40px;
-                    width: 120px;
-                    //background-color: lightyellow;
+                    flex: 1;
+                    min-width: 100px;
                     //border: 1px solid #000;
                     &:hover{color: #f1f1f1; cursor: pointer;} 
+                }
+                #filler{
+                    //background: lightseagreen;
+                    width: 80px;
                 }
                 #dropdown-box{
                     position: absolute;

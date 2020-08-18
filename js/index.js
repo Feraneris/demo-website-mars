@@ -113,19 +113,6 @@ dotsNav.addEventListener('click', e => {
     //console.log(targetIndex);
 });
 
-
-// testing content swapping
-// document.getElementById("missions").addEventListener("click", function() {
-//     var x=document.getElementById("page-main");
-//     if(x.style.display==="block"){
-//         x.style.display="none";
-//         document.getElementById("page-mission-01").style.display="flex";
-//     } else {
-//         x.style.display="block";
-//         document.getElementById("page-mission-01").style.display="none";
-//     }
-// });
-
 const missions = document.getElementById("nav-missions");
 const facts = document.getElementById("nav-facts");
 const reasons = document.getElementById("nav-reasons");
@@ -137,6 +124,8 @@ const menuFacts = document.getElementById("menu-facts");
 const menuReasons = document.getElementById("menu-reasons");
 const home = document.getElementById("home");
 
+const mobile = window.matchMedia( "(max-width: 980px)" );
+
 missions.onmouseenter = () => {
     menuFacts.style.transition="0s";
     menuFacts.style.transitionDelay="0s";
@@ -145,9 +134,19 @@ missions.onmouseenter = () => {
     menuMissions.style.display="flex";
     menuMissions.style.transition="0.5s";
     menuMissions.style.transitionDelay="0.2s";
-    dropdownBox.style.width="400px";
-    dropdownBox.style.height="370px";
-    dropdownBox.style.right="100px";
+    
+    if (mobile.matches) {
+        dropdownBox.style.width="95%";
+        dropdownBox.style.height="380px";
+        dropdownBox.style.right="unset";
+        pointer.style.display="none";
+    }
+    else {
+        dropdownBox.style.width="400px";
+        dropdownBox.style.height="370px";
+        dropdownBox.style.right="100px";
+    }
+    
     dropdownBox.style.background="rgba(255,255,255,0.9)";
     menuMissions.style.color="rgb(213, 91, 78)";
     pointer.style.background="rgb(213, 91, 78)";
@@ -165,9 +164,19 @@ facts.onmouseenter = () => {
     menuFacts.style.display="flex";
     menuFacts.style.transition="0.5s";
     menuFacts.style.transitionDelay="0.2s";
-    dropdownBox.style.width="160px";
-    dropdownBox.style.height="200px";
-    dropdownBox.style.right="100px";
+
+    if (mobile.matches) {
+        dropdownBox.style.width="95%";
+        dropdownBox.style.height="380px";
+        dropdownBox.style.right="unset";
+        pointer.style.display="none";
+    }
+    else {
+        dropdownBox.style.width="160px";
+        dropdownBox.style.height="200px";
+        dropdownBox.style.right="100px";
+    }
+    
     dropdownBox.style.background="rgba(255,255,255,0.9)";
     menuFacts.style.color="rgb(213, 91, 78)";
     pointer.style.background="rgb(213, 91, 78)";
@@ -185,9 +194,19 @@ reasons.onmouseenter = () => {
     menuReasons.style.display="flex";
     menuReasons.style.transition="0.5s";
     menuReasons.style.transitionDelay="0.2s";
-    dropdownBox.style.width="350px";
-    dropdownBox.style.height="170px";
-    dropdownBox.style.right="-115px";
+
+    if (mobile.matches) {
+        dropdownBox.style.width="95%";
+        dropdownBox.style.height="380px";
+        dropdownBox.style.right="unset";
+        pointer.style.display="none";
+    }
+    else {
+        dropdownBox.style.width="350px";
+        dropdownBox.style.height="170px";
+        dropdownBox.style.right="-115px";
+    }
+
     dropdownBox.style.background="rgba(255,255,255,0.9)";
     menuReasons.style.color="rgb(213, 91, 78)";
     pointer.style.background="rgb(213, 91, 78)";
